@@ -81,9 +81,9 @@
   }
 html,
 body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+   width: 100%;
+    overflow-x: hidden;
+    position: relative;
 }
 
 *,
@@ -1538,31 +1538,37 @@ p {
     background-size: 60px 100%;
 }
     .hero-area .section__bg::before {
-      position: absolute;
-      content: '';
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 100%;
-      background-color:#f8f9fa;
-      opacity: .4; }
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    #130f40 0%,          /* Üst kısım rengi */
+    #130f40 70%,         
+    rgba(0,0,0,0.8) 90%, /* Geçiş başlangıcı */
+    #000000 100%         /* Alt kısım rengi */
+  );
+  z-index: -1; /* Arka planda kalmasını sağlar */
+}
   .hero-area.hero-2-area {
   position: relative;
   overflow: visible;
 }
    .hero-area.hero-2-area .section__bg {
-    background-image: url('https://i.hizliresim.com/exerlbb.jpg'); /* Buraya kendi fotoğrafınızın URL'sini ekleyin */
+        background-image: url("https://i.hizliresim.com/opwhfk8.jpg");
     background-size: cover; /* Fotoğrafın tüm alanı kaplamasını sağlar */
     background-position: center; /* Fotoğrafı ortalar */
     background-repeat: no-repeat; /* Fotoğrafın tekrarlanmamasını sağlar */
 }
       
-      .hero-area.hero-2-area .section__bg::before {
-        opacity: .65; }
+      
   .hero-area.hero-5-area .section__bg {
     background-color: #f8f9fa; }
     .hero-area.hero-5-area .section__bg::before {
-      opacity: .60; }
+      opacity: 1; }
   .hero-area.hero-5-area .hero-social {
     position: absolute;
     left: 30px;
