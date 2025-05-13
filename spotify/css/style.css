@@ -3567,7 +3567,7 @@ p {
     top: 50%;
     transform: translateY(-50%);
     right: 90px;
-    border-radius: 8px;
+    border-radius: 10px;
     background: linear-gradient(330deg, #ff564f 0%, #fad029 80%);
     height: 160px;
     width: 160px;
@@ -6870,7 +6870,7 @@ p {
 
 .article-2-item {
   border: 1px solid #E0E0E0;
-  border-radius: 8px;
+  border-radius: 10px;
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
   -ms-transition: all 0.3s ease-out 0s;
@@ -7450,7 +7450,7 @@ p {
   .footer-newsletter-item .input-box input {
     width: 100%;
     background: #383838;
-    border-radius: 8px;
+    border-radius: 10px;
     line-height: 60px;
     padding-left: 20px;
     border: 0;

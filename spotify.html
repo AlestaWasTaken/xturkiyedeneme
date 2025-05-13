@@ -42,84 +42,184 @@
 <body class="bg-white">
 
     <!-- LOADER -->
-    <div class="preloader">
-        <div class="lds-ellipsis">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
+    
     <!-- END LOADER -->
    
     <!--====== HEADER PART START ======-->
-    <div class="header-nav">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="navigation">
-                        <nav class="navbar navbar-expand-lg navbar-light ">
+    <div class="x-header">
+    <div class="x-header-container">
+        <div class="x-header-row">
+            <div class="x-header-col">
+                <div class="x-nav-wrapper">
+                    <nav class="x-navbar">
+                        <!-- Logo - Light Version -->
+                        <a class="x-brand" href="index.html">
+                            <img src="index/images/xturkiye.png" alt="XTurkiye Logo" class="x-logo">
+                        </a>
 
-                            <a class="navbar-brand" href="index.html"><img src="spotify/images/xturkiye.png"  alt="" style="scale: 50%; position: relative; left: -220px; bottom: 2rem;"></a> <!-- logo -->
+                        <!-- Mobile Toggle -->
+                        <button class="x-menu-toggle" type="button" data-toggle="collapse" data-target="#xMainMenu" aria-label="Menu" style="position: relative; right: 1rem">
+                            <span class="x-toggle-bar"></span>
+                            <span class="x-toggle-bar"></span>
+                            <span class="x-toggle-bar"></span>
+                        </button>
 
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="toggler-icon"></span>
-                                <span class="toggler-icon"></span>
-                                <span class="toggler-icon"></span>
-                            </button> <!-- navbar toggler -->
-
-                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent" style="position: relative; bottom: 2rem;">
-                                <ul class="navbar-nav ml-auto">
-                                    <li class="nav-item active">
-                                        <a class="nav-link" href="index.html">Anasayfa</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Hakkımızda </a>
-                                    </li>
-                              
-                                    
-                                </ul>
-                            </div> <!-- navbar collapse -->
-
-                            <div class="navbar-btn d-none d-sm-block" zstyle="position: relative; bottom: 2rem;">
-                                <a class="main-btn main-btn-3" href="#">İletişime Geç!</a>
+                        <!-- Menu -->
+                        <div class="x-menu-collapse" id="xMainMenu">
+                            <ul class="x-nav-menu">
+                                <li class="x-nav-item">
+                                    <a class="x-nav-link" href="index.html">Anasayfa</a>
+                                </li>
+                                <li class="x-nav-item">
+                                    <a class="x-nav-link" href="#">Hakkımızda</a>
+                                </li>
+                                <li class="x-nav-item">
+                                    <a class="x-nav-link" href="#">Hizmetler</a>
+                                </li>
+                                <li class="x-nav-item">
+                                    <a class="x-nav-link" href="#">Referanslar</a>
+                                </li>
+                            </ul>
+                            
+                            <!-- Contact Button -->
+                            <div class="x-contact-btn">
+                                <a class="x-btn x-btn-primary" href="#">
+                                    <i class="fas fa-paper-plane"></i> İletişime Geç
+                                </a>
                             </div>
-
-                        </nav>
-                    </div> <!-- navigation -->
+                        </div>
+                    </nav>
                 </div>
-            </div> <!-- row -->
+            </div>
         </div>
     </div>
-    <header class="header-area header-2-area header-11-area">
-        
-    </header>
+</div>
+
+<style>
+  .x-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 20px 0;
+    transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+    backdrop-filter: blur(10px);
+    background: rgb(0, 0, 0);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.x-header.scrolled {
+    background: rgb(0, 0, 0);
+    padding: 10px 0;
+    backdrop-filter: blur(15px);
+}
+
+.x-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.x-logo {
+    height: 40px;
+    transition: all 0.3s ease;
+}
+
+.x-menu-toggle {
+    background: transparent;
+    border: none;
+    padding: 10px;
+    display: none;
+}
+
+.x-toggle-bar {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: white;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.x-menu-collapse {
+    display: flex;
+    align-items: center;
+}
+
+.x-nav-menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.x-nav-item {
+    margin: 0 15px;
+    position: relative;
+}
+
+.x-nav-link {
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 8px 0;
+    position: relative;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.x-nav-link:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #1DB954;
+    transition: width 0.3s ease;
+}
+
+.x-nav-link:hover:after {
+    width: 100%;
+}
+
+.x-contact-btn {
+    margin-left: 30px;
+}
+
+.x-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.x-btn-primary {
+    background: white;
+    color: #1DB954;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.x-btn-primary:hover {
+    background: #f1f1f1;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.x-btn i {
+    margin-right: 8px;
+}
+</style>
 
     <!--====== HEADER PART ENDS ======-->
 
     <!--====== HERO PART START ======-->
     
-    <section class="hero-slider hero-11-slider">
-        <div class="hero-area hero-2-area">
-            <div class="section__bg"></div>
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-7">
-                        <div class="hero-2-content hero-11-content">
-                            <h1 class="title" data-animation="fadeInLeft" data-delay="0.6s">Spotify Hizmetleri</h1>
-                            <div class="text" data-animation="fadeInLeft" data-delay="0.7s">
-                                <p>İster görünürlüğünü artır, ister kitlelere ulaşmana yardım et.</p>
-                            </div>
-                            <ul  data-animation="fadeInUp" data-delay="0.8s">
-                                <li><a class="main-btn" href="#yazilar"> Hizmet Almak İstiyorum</a></li>
-                      
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-    </section>
+    
     <!--====== HERO PART ENDS ======-->
     <!--====== ABOUT 2 PART START ======-->
     
@@ -135,12 +235,13 @@
   <br>
   <p class="listener-count" id="listenerCount">Minimum <strong>+2.000</strong> Dinleyici veya Dinlenme</p>
 
-  <div class="price" id="priceStarter">₺1.600 + KDV</div>
+  <div class="price" id="priceStarter">₺1.200</div>
 
-  <div class="slider-container">
-    <span class="slider-arrow">»</span>
-    <input type="range" id="sliderStarter" min="2000" max="200000" value="2000" step="1000">
-  </div>
+ <div class="slider-container">
+  <span class="slider-arrow">»</span>
+  <span class="slider-hint">Kaydır</span>
+  <input type="range" id="sliderStarter" min="2000" max="200000" value="2000" step="1000">
+</div>
   <br>
 
   <div class="yazilar">
@@ -162,146 +263,15 @@
     <h3>Satın Alma Tamamlandı!</h3>
     <p>Fiyat: <span id="finalPriceSpotify">₺1.600 + KDV</span></p>
     <label for="spotifyLink">Spotify Linkinizi Girin:</label>
+    <input type="text" id="spotifyName" placeholder="Adınız"> <!-- Eklendi -->
     <input type="text" id="spotifyLink" placeholder="Spotify linkinizi buraya yazın">
+    <input type="hidden" id="modalSliderValue"> <!-- Slider değeri için gizli input -->
     <button onclick="submitLinkSpotify()">Gönder</button>
   </div>
 </div>
 
 <!-- YOUTUBE -->
-            <div class="pricing-card">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"
-       alt="YouTube Logo" class="spotify-logo">
-  <br>
-  <p class="listener-count" id="viewCount">Minimum <strong>+10.000</strong> İzlenme</p>
-
-  <div class="price" id="priceYouTube">₺800 + KDV</div>
-
-  <div class="slider-container">
-    <span class="slider-arrow">»</span>
-    <input type="range" id="sliderYouTube" min="10000" max="1000000" value="10000" step="1000">
-  </div>
-  <br>
-
-  <div class="yazilar">
-    <p><strong>%100 Organik (Gerçek) İzlenmelerle Büyü!</strong></p>
-    <p>• İçeriğiniz, ilgi alanına göre yüksek etkileşimli YouTube kanalları ve önerilere dahil edilir.</p>
-    <p>• Konum hedeflemesi: <strong>Türkiye</strong></p>
-    <p>• Kampanya sona erse bile görüntülenmeler artmaya devam eder.</p>
-    <p>• <strong>Bot ya da sahte yazılım işlemleri kesinlikle uygulanmaz.</strong></p>
-    <p>• <strong>Kişiye özel içerik planlaması için 10.00 - 18.00 saatleri arasında WhatsApp destek hattımızdan bize ulaşabilirsiniz.</strong></p>
-  </div>
-
-  <a href="#" class="satinal" onclick="showModal(event)">Satın Al</a>
-</div>
-
-<!-- Modal -->
-<div id="purchaseModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <h3>Satın Alma Tamamlandı!</h3>
-    <p>Fiyat: <span id="finalPrice">₺800 + KDV</span></p>
-    <label for="youtubeLink">YouTube Linkinizi Girin:</label>
-    <input type="text" id="youtubeLink" placeholder="YouTube linkinizi buraya yazın">
-    <button onclick="submitLink()">Gönder</button>
-  </div>
-</div>
-
-
-<!-- TikTok Kartları -->
-
-<!-- Kart 1: Kullanıcı Başına -->
-<!-- Kart 1: Kullanıcı Başına -->
-<div class="pricing-card">
-  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a9/TikTok_logo.svg/640px-TikTok_logo.svg.png"
-       alt="TikTok Logo" class="spotify-logo">
-  <br>
-  <p class="listener-count" id="userCount">Minimum <strong>+10</strong> Kullanıcı</p>
-
-  <div class="price" id="priceUser">₺200 + KDV</div>
-
-  <div class="slider-container">
-    <span class="slider-arrow">»</span>
-    <input type="range" id="sliderUser" min="10" max="100" value="10" step="1">
-  </div>
-  <br>
-
-  <div class="yazilar">
-    <p><strong>%100 Organik TikTok Kullanıcıları ile Etkileşim Kazanın!</strong></p>
-    <p>• İçeriğiniz, hedef kitlenize uygun aktif TikTok kullanıcılarıyla gösterilir.</p>
-    <p>• Konum hedeflemesi: <strong>Türkiye</strong></p>
-    <p>• Kampanya sona erdikten sonra bile etkileşim devam eder.</p>
-    <p>• <strong>Bot ya da sahte yazılım işlemleri kesinlikle uygulanmaz.</strong></p>
-    <p>• <strong>Kişiye özel TikTok planlaması için 10.00 - 18.00 saatleri arasında WhatsApp destek hattımızdan bize ulaşabilirsiniz.</strong></p>
-  </div>
-
-  <a href="#" class="satinal" onclick="showModalTikTok('user')">Satın Al</a>
-</div>
-
-<!-- Kart 2: Mikro Fenomen Başına -->
-<div class="pricing-card">
-  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a9/TikTok_logo.svg/640px-TikTok_logo.svg.png"
-       alt="TikTok Logo" class="spotify-logo">
-  <br>
-  <p class="listener-count" id="microInfluencerCount">Minimum <strong>+10</strong> Mikro Fenomen</p>
-
-  <div class="price" id="priceMicroInfluencer">₺450 + KDV</div>
-
-  <div class="slider-container">
-    <span class="slider-arrow">»</span>
-    <input type="range" id="sliderMicroInfluencer" min="10" max="100" value="10" step="1">
-  </div>
-  <br>
-
-  <div class="yazilar">
-    <p><strong>%100 Organik Mikro Fenomenler ile Etkileşim Kazanın!</strong></p>
-    <p>• İçeriğiniz, yüksek etkileşimli mikro fenomenlerle gösterilir.</p>
-    <p>• Konum hedeflemesi: <strong>Türkiye</strong></p>
-    <p>• Kampanya sona erdikten sonra bile etkileşim devam eder.</p>
-    <p>• <strong>Bot ya da sahte yazılım işlemleri kesinlikle uygulanmaz.</strong></p>
-    <p>• <strong>Kişiye özel TikTok planlaması için 10.00 - 18.00 saatleri arasında WhatsApp destek hattımızdan bize ulaşabilirsiniz.</strong></p>
-  </div>
-
-  <a href="#" class="satinal" onclick="showModalTikTok('microInfluencer')">Satın Al</a>
-</div>
-
-<!-- Kart 3: %100 Keşfet Özel Şarkı Edit -->
-<div class="pricing-card">
-  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a9/TikTok_logo.svg/640px-TikTok_logo.svg.png"
-       alt="TikTok Logo" class="spotify-logo">
-  <br>
-  <p class="listener-count" id="discoverEditCount">Minimum <strong>+1</strong> Makro Fenomen</p>
-
-  <div class="price" id="priceDiscoverEdit">₺4000 + KDV</div>
-
-  <div class="slider-container">
-    <span class="slider-arrow">»</span>
-    <input type="range" id="sliderDiscoverEdit" min="1" max="25" value="1" step="1">
-  </div>
-  <br>
-
-  <div class="yazilar">
-    <p><strong>%100 Organik Keşfet ile Özel Şarkı Editi!</strong></p>
-    <p>• İçeriğiniz, keşfette yüksek etkileşimli TikTok kullanıcılarına gösterilir.</p>
-    <p>• Konum hedeflemesi: <strong>Türkiye</strong></p>
-    <p>• Kampanya sona erdikten sonra bile etkileşim devam eder.</p>
-    <p>• <strong>Bot ya da sahte yazılım işlemleri kesinlikle uygulanmaz.</strong></p>
-    <p>• <strong>Kişiye özel TikTok planlaması için 10.00 - 18.00 saatleri arasında WhatsApp destek hattımızdan bize ulaşabilirsiniz.</strong></p>
-  </div>
-
-  <a href="#" class="satinal" onclick="showModalTikTok('discoverEdit')">Satın Al</a>
-</div>
-
-<div id="purchaseModalTikTok" class="modal" style="display:none;">
-  <div class="modal-content">
-    <span class="close" onclick="closeModalTikTok()">&times;</span>
-    <h3>Satın Alma Tamamlandı!</h3>
-    <p><strong>Fiyat:</strong> <span id="finalPriceTikTok">₺0 + KDV</span></p>
-    <p><strong>Seçim:</strong> <span id="finalCountTikTok"></span></p>
-    <label for="tikTokLink">TikTok Linkinizi Girin:</label>
-    <input type="text" id="tikTokLink" placeholder="TikTok linkinizi buraya yazın">
-    <button onclick="submitLinkTikTok()">Gönder</button>
-  </div>
-</div>
+          
 
 <!-- Modal için basit stil -->
 <style>
@@ -450,49 +420,57 @@ input[type=range] {
 
 
 .slider-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 15px;
+  gap: 10px;
+}
+
+.slider-hint {
+  font-size: 12px;
+  color: #666;
+  order: 2; /* Yazıyı sağa al */
+  flex-grow: 1;
+  text-align: right;
+  padding-right: 10px;
 }
 
 .slider-arrow {
-    font-size: 40px;
-    color: #000; /* Ok simgesinin rengi */
-    cursor: pointer;
+  font-size: 14px;
+  color: #666;
+  order: 1; /* Oku sola al */
 }
 
-
-input[type=range]:hover {
-  background: #ccc;
+input[type=range] {
+  order: 3; /* Slider'ı en sağa al */
+  width: 100%;
+  -webkit-appearance: none;
+  height: 6px;
+  background: #ddd;
+  border-radius: 5px;
+  outline: none;
 }
 
-/* Chrome, Safari, Edge */
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  appearance: none;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   background: #fff;
-  border: 2px solid #7d5fff;
+  border: 2px solid #1DB954;
   border-radius: 50%;
   cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
-}
-
-input[type=range]::-webkit-slider-thumb:hover {
-  background: #f1f1f1;
-  transform: scale(1.1);
 }
 
 /* Firefox */
-input[type=range]::-moz-range-thumb {
-  width: 20px;
-  height: 20px;
+input[type=range]::-moz-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
   background: #fff;
-  border: 2px solid #7d5fff;
+  border: 2px solid #1DB954;
   border-radius: 50%;
   cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
 }
 
 input[type=range]::-moz-range-thumb:hover {
@@ -512,6 +490,8 @@ input[type=range]::-moz-range-thumb:hover {
           margin-bottom: 60px;
           color: #000;
           font-family: 'Rethink Sans';
+          position: relative;
+    top: 20px;
         }
         
         .pricing-cards {
@@ -661,7 +641,7 @@ sliderUser.addEventListener('input', function() {
   const userCountValue = parseInt(this.value);
   const price = (userCountValue * 200).toFixed(2); // 200 TL fiyatı
   userCount.innerHTML = `Minimum <strong>+${userCountValue}</strong> Kullanıcı`;
-  priceUser.textContent = `₺${parseFloat(price).toLocaleString('tr-TR')} + KDV`;
+  priceUser.textContent = `₺${parseFloat(price).toLocaleString('tr-TR')}`;
 });
 
 const sliderMicroInfluencer = document.getElementById('sliderMicroInfluencer');
@@ -672,7 +652,7 @@ sliderMicroInfluencer.addEventListener('input', function() {
   const microInfluencerCountValue = parseInt(this.value);
   const price = (microInfluencerCountValue * 450).toFixed(2); // 450 TL fiyatı
   microInfluencerCount.innerHTML = `Minimum <strong>+${microInfluencerCountValue}</strong> Mikro Fenomen`;
-  priceMicroInfluencer.textContent = `₺${parseFloat(price).toLocaleString('tr-TR')} + KDV`;
+  priceMicroInfluencer.textContent = `₺${parseFloat(price).toLocaleString('tr-TR')}`;
 });
 
 const sliderDiscoverEdit = document.getElementById('sliderDiscoverEdit');
@@ -683,7 +663,7 @@ sliderDiscoverEdit.addEventListener('input', function() {
   const discoverEditCountValue = parseInt(this.value);
   const price = (discoverEditCountValue * 4000).toFixed(2); // 500 TL fiyatı
   discoverEditCount.innerHTML = `Minimum <strong>+${discoverEditCountValue}</strong> Makro Fenomen`;
-  priceDiscoverEdit.textContent = `₺${parseFloat(price).toLocaleString('tr-TR')} + KDV`;
+  priceDiscoverEdit.textContent = `₺${parseFloat(price).toLocaleString('tr-TR')}`;
 });
 
 // Modal'ı gösterme fonksiyonu
@@ -744,13 +724,13 @@ const listenerCount = document.getElementById('listenerCount');
 
 sliderStarter.addEventListener('input', function () {
   const dinleyici = parseInt(this.value);
-  const fiyat = (dinleyici * 0.80).toFixed(2); // ondalıklı ₺
+  const fiyat = (dinleyici * 0.60).toFixed(2); // ondalıklı ₺
 
   // Dinleyici sayısını "Minimum +2.000 Dinleyici" şeklinde yaz
   listenerCount.innerHTML = `Minimum +<strong>${dinleyici.toLocaleString('tr-TR')}</strong> Dinleyici veya Dinlenme`;
 
   // Fiyatı yaz
-  priceStarter.textContent = `₺${parseFloat(fiyat).toLocaleString('tr-TR')} + KDV`;
+  priceStarter.textContent = `₺${parseFloat(fiyat).toLocaleString('tr-TR')}`;
 });
   </script>
 
@@ -761,25 +741,24 @@ const viewCount = document.getElementById('viewCount');
 
 sliderYouTube.addEventListener('input', function () {
   const izlenme = parseInt(this.value);
-  const fiyat = (izlenme * 0.08).toFixed(2); // 10.000 izlenme 800 TL => 0.08 TL başı
+  const fiyat = (izlenme * 0.06).toFixed(2); // 10.000 izlenme 800 TL => 0.08 TL başı
 
   viewCount.innerHTML = `Minimum +<strong>${izlenme.toLocaleString('tr-TR')}</strong> İzlenme`;
-  priceYouTube.textContent = `₺${parseFloat(fiyat).toLocaleString('tr-TR')} + KDV`;
+  priceYouTube.textContent = `₺${parseFloat(fiyat).toLocaleString('tr-TR')}`;
 });
 
 // Modal'ı gösterme fonksiyonu
 function showModal(event) {
-  event.preventDefault();  // Sayfanın yenilenmesini engeller
-
-  const modal = document.getElementById('purchaseModal');
-  const priceYouTube = document.getElementById('priceYouTube').textContent;
+  event.preventDefault();
+  const modal = document.getElementById("purchaseModalSpotify");
+  const priceStarter = document.getElementById("priceStarter").textContent;
+  const sliderValue = document.getElementById("sliderStarter").value;
   
-  // Fiyatı modalda güncelle
-  document.getElementById('finalPrice').textContent = priceYouTube;
-  
-  // Modal'ı göster
+  document.getElementById("finalPriceSpotify").textContent = priceStarter;
+  document.getElementById("modalSliderValue").value = sliderValue; // Slider değerini sakla
   modal.style.display = "block";
 }
+
 
 // Modal'ı kapatma fonksiyonu
 function closeModal() {
@@ -832,28 +811,52 @@ function closeModal() {
   modal.style.display = "none"; // Modal'ı gizle
 }
 
-// Spotify linki gönderildiğinde yapılacak işlem
+document.getElementById("priceSlider").addEventListener("input", function() {
+  var price = this.value; // Kaydırıcıdaki değeri al
+  document.getElementById("finalPriceSpotify").textContent = price; // Fiyatı güncelle
+});
+
+document.getElementById("priceSlider").addEventListener("input", function() {
+  var price = this.value; // Kaydırıcıdaki değeri al
+  document.getElementById("finalPriceSpotify").textContent = price; // Fiyatı güncelle
+});
+
+
+document.getElementById("priceSlider").addEventListener("input", function() {
+  var price = this.value; // Kaydırıcıdaki değeri al
+  document.getElementById("finalPriceSpotify").textContent = price; // Fiyatı güncelle
+});
+
+// Sipariş gönderme işlemi
 function submitLinkSpotify() {
-  const spotifyLink = document.getElementById('spotifyLink').value;
-  const finalPrice = document.getElementById('finalPriceSpotify').textContent;
+  const name = document.getElementById("spotifyName").value;
+  const link = document.getElementById("spotifyLink").value;
+  const price = document.getElementById("finalPriceSpotify").textContent.trim();
+  
+  // Dinleyici sayısını al (örneğin: "Minimum +2.000 Dinleyici veya Dinlenme" yazısından)
+  const listenerText = document.getElementById("listenerCount").textContent;
+  const listeners = listenerText.match(/Minimum \+(.+?) Dinleyici/)[1]; // "2.000" gibi değeri çıkarır
 
-  if (spotifyLink) {
-    // Ödeme sayfasına yönlendirme yapılacak URL
-    const paymentUrl = `https://yourpaymentgateway.com/payment?price=${encodeURIComponent(finalPrice)}&link=${encodeURIComponent(spotifyLink)}`;
-
-    // Yönlendirme işlemi
-    window.location.href = paymentUrl;
-  } else {
-    alert("Lütfen geçerli bir Spotify linki girin.");
+  if (!link) {
+    alert("Lütfen Spotify linkinizi girin.");
+    return;
   }
-}
 
-// Modal dışına tıklandığında kapanmasını sağlamak için
-window.onclick = function(event) {
-  const modal = document.getElementById('purchaseModalSpotify');
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+  const phoneNumber = "905517477767";
+const message = `
+ *Spotify Dinlenme Siparişi*
+
+ *Ad Soyad:* ${name}
+*Fiyat:* ${price}
+ *Hedef Minimum Dinleyici Sayısı:* ${listeners}
+ *Spotify Linki:* ${link}
+
+Detayları kontrol edip onayladıktan sonra süreci başlatacağız.
+Teşekkür ederiz! 
+`;
+  const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+  window.open(whatsappURL, "_blank");
 }
 
 </script>
@@ -868,47 +871,47 @@ window.onclick = function(event) {
     
     <!-- Fotoğraflı Artist Slider -->
 <section class="artists-slider-section">
-    <div class="container">
-        <h2 class="section-title">6. Yılımızı Kutluyoruz 850’den Fazla Sanatçı Ve Müzik Şirketleriyle İşbirliği</h2>
+        <div class="container">
+            <h2 class="section-title">6. Yılımızı Kutluyoruz 850'den Fazla Sanatçı Ve Müzik Şirketleriyle İşbirliği</h2>
 
-        <!-- Üst Sıra - Sağa Kaydır -->
-        <div class="artists-slider sliding-right">
-            <div class="artist-item"><div class="artist-image"><img src="https://i.scdn.co/image/ab6761610000e5ebc804eb55aef746c1683a8a81" alt="Pois"></div><div class="artist-name">Pois</div></div>
-            <div class="artist-item"><div class="artist-image"><img src="https://cdn.bubilet.com.tr/files/Sanatci/wegh-32138.jpeg" alt="Wegh"></div><div class="artist-name">Wegh</div></div>
-            <div class="artist-item"><div class="artist-image"><img src="https://cdn.bubilet.com.tr/files/Sanatci/era7capone--53882.jpg" alt="Era7"></div><div class="artist-name">Era7capone</div></div>
-            <div class="artist-item"><div class="artist-image"><img src="https://images.genius.com/0808d8dd1a495794e6f79151302727d1.300x300x1.png" alt="Poizi"></div><div class="artist-name">Poizi</div></div>
-            <div class="artist-item"><div class="artist-image"><img src="https://www.faorganizasyon.com.tr/wp-content/uploads/2022/01/fa-organizasyon_tugba-yurt-menajeri.jpg" alt="Tuğba Yurt"></div><div class="artist-name">Tuğba Yurt</div></div>
-            <div class="artist-item"><div class="artist-image"><img src="https://i.scdn.co/image/ab6761610000e5eb50d9849f55cb64a1dea567ba" alt="THYPONYX"></div><div class="artist-name">THYPONYX</div></div>
-            <div class="artist-item"><div class="artist-image"><img src="https://i.scdn.co/image/ab67616d00001e024a160d8a26251229468bfd99" alt="Oğuz Gümüş"></div><div class="artist-name">Oğuz Gümüş</div></div>
-            <div class="artist-item"><div class="artist-image"><img src="https://cdn-images.dzcdn.net/images/cover/be00cb7d6b95950be12a3f4264853b66/0x1900-000000-80-0-0.jpg" alt="Erdal Toprak"></div><div class="artist-name">Erdal Toprak</div></div>
-            <div class="artist-item"><div class="artist-image"><img src="https://cdn-images.dzcdn.net/images/artist/13584634152150f2fff5be108117e4f7/500x500.jpg" alt="Ata Alabaş"></div><div class="artist-name">Ata Alabaş</div></div>
-            <div class="artist-item"><div class="artist-image"><img src="https://kimdir.tv/wp-content/uploads/2020/01/pinar-suer-kimdir.jpg" alt="Pınar Süer"></div><div class="artist-name">Pınar Süer</div></div>
-            <div class="artist-item"><div class="artist-image"><img src="https://i.scdn.co/image/ab6761610000e5eb03790af9b4e42472226c1e9e" alt="Ceren Sagu"></div><div class="artist-name">Ceren Sagu</div></div>
-            <div class="artist-item"><div class="artist-image"><img src="https://i.scdn.co/image/ab6761610000e5eb5caac7f517d77d039c1a828d" alt="Berkay"></div><div class="artist-name">Berkay</div></div>
-            <div class="artist-item"><div class="artist-image"><img src="https://b6s54eznn8xq.merlincdn.net/Uploads/People/2c00922f5ec94271902835d9d0ef407d.jpg" alt="Gökhan Türkmen"></div><div class="artist-name">Gökhan Türkmen</div></div>
-            <div class="artist-item"><div class="artist-image"><img src="https://i.hizliresim.com/apzxei9.jpeg" alt="Resim Yükle"></a>" alt="Boi"></div><div class="artist-name">Boi</div></div>
-            <div class="artist-item"><div class="artist-image"><img src="https://yt3.googleusercontent.com/nmOpMkprXT5JFrc6qEkd6QW3WdyYVEbXklxcTBYGLF9v5mCd_Rfw6obFEvGH34J3lnQ3r5PNsEA=s900-c-k-c0x00ffffff-no-rj" alt="Işıl Ayman"></div><div class="artist-name">Işıl Ayman</div></div>
-        </div>
+            <!-- Üst Sıra - Sağa Kaydır -->
+            <div class="artists-slider sliding-right">
+                <div class="artist-item"><div class="artist-image"><img src="https://i.scdn.co/image/ab6761610000e5ebc804eb55aef746c1683a8a81" alt="Pois"></div><div class="artist-name">Pois</div></div>
+                <div class="artist-item"><div class="artist-image"><img src="https://cdn.bubilet.com.tr/files/Sanatci/wegh-32138.jpeg" alt="Wegh"></div><div class="artist-name">Wegh</div></div>
+                <div class="artist-item"><div class="artist-image"><img src="https://cdn.bubilet.com.tr/files/Sanatci/era7capone--53882.jpg" alt="Era7"></div><div class="artist-name">Era7capone</div></div>
+                <div class="artist-item"><div class="artist-image"><img src="https://images.genius.com/0808d8dd1a495794e6f79151302727d1.300x300x1.png" alt="Poizi"></div><div class="artist-name">Poizi</div></div>
+                <div class="artist-item"><div class="artist-image"><img src="https://www.faorganizasyon.com.tr/wp-content/uploads/2022/01/fa-organizasyon_tugba-yurt-menajeri.jpg" alt="Tuğba Yurt"></div><div class="artist-name">Tuğba Yurt</div></div>
+                <div class="artist-item"><div class="artist-image"><img src="https://i.scdn.co/image/ab6761610000e5eb50d9849f55cb64a1dea567ba" alt="THYPONYX"></div><div class="artist-name">THYPONYX</div></div>
+                <div class="artist-item"><div class="artist-image"><img src="https://i.scdn.co/image/ab67616d00001e024a160d8a26251229468bfd99" alt="Oğuz Gümüş"></div><div class="artist-name">Oğuz Gümüş</div></div>
+                <div class="artist-item"><div class="artist-image"><img src="https://cdn-images.dzcdn.net/images/cover/be00cb7d6b95950be12a3f4264853b66/0x1900-000000-80-0-0.jpg" alt="Erdal Toprak"></div><div class="artist-name">Erdal Toprak</div></div>
+                <div class="artist-item"><div class="artist-image"><img src="https://cdn-images.dzcdn.net/images/artist/13584634152150f2fff5be108117e4f7/500x500.jpg" alt="Ata Alabaş"></div><div class="artist-name">Ata Alabaş</div></div>
+                <div class="artist-item"><div class="artist-image"><img src="https://kimdir.tv/wp-content/uploads/2020/01/pinar-suer-kimdir.jpg" alt="Pınar Süer"></div><div class="artist-name">Pınar Süer</div></div>
+                <div class="artist-item"><div class="artist-image"><img src="https://i.scdn.co/image/ab6761610000e5eb03790af9b4e42472226c1e9e" alt="Ceren Sagu"></div><div class="artist-name">Ceren Sagu</div></div>
+                <div class="artist-item"><div class="artist-image"><img src="https://i.scdn.co/image/ab6761610000e5eb5caac7f517d77d039c1a828d" alt="Berkay"></div><div class="artist-name">Berkay</div></div>
+                <div class="artist-item"><div class="artist-image"><img src="https://b6s54eznn8xq.merlincdn.net/Uploads/People/2c00922f5ec94271902835d9d0ef407d.jpg" alt="Gökhan Türkmen"></div><div class="artist-name">Gökhan Türkmen</div></div>
+                <div class="artist-item"><div class="artist-image"><img src="https://i.hizliresim.com/apzxei9.jpeg" alt="Boi"></div><div class="artist-name">Boi</div></div>
+                <div class="artist-item"><div class="artist-image"><img src="https://yt3.googleusercontent.com/nmOpMkprXT5JFrc6qEkd6QW3WdyYVEbXklxcTBYGLF9v5mCd_Rfw6obFEvGH34J3lnQ3r5PNsEA=s900-c-k-c0x00ffffff-no-rj" alt="Işıl Ayman"></div><div class="artist-name">Işıl Ayman</div></div>
+            </div>
 
-        <!-- Alt Sıra - Sola Kaydır -->
-        <div class="artists-slider sliding-left">
-            <div class="artist-item"><div class="artist-image"><img src="https://cdn.bubilet.com.tr/files/Etkinlik/yusuf-guney-astral-83491.JPG" alt="Yusuf Güney"></div><div class="artist-name">Yusuf Güney</div></div>
-            <div class="artist-item"><div class="artist-image"><img src="https://yt3.googleusercontent.com/V-jF-EugpA2Y-VwB06SGj2mUaDKh7GXWFFgFk1tj5LUHzS9zD9o6yqPqSwfOOY7BNEYVdIZTwuw=s900-c-k-c0x00ffffff-no-rj" alt="Uğur Özçelik"></div><div class="artist-name">Uğur Özçelik</div></div>
-            <div class="artist-item"><div class="artist-image"><img src="https://cdn-images.dzcdn.net/images/artist/a794ed33fbe0b53eda9bc77eb9da09f6/1900x1900-000000-80-0-0.jpg" alt="Murat Övüç"></div><div class="artist-name">Murat Övüç</div></div>
-            <div class="artist-item"><div class="artist-image"><img src="https://yt3.googleusercontent.com/2omVDwRWPzJb5nQpNnHj6vGQc57EbLFRGCB9kwU02it2Fb4L1GNjrEEicLWhP7X3F9QiGPea-g=s900-c-k-c0x00ffffff-no-rj" alt="Melis Kar"></div><div class="artist-name">Melis Kar</div></div>
-            <div class="artist-item"><div class="artist-image"><img src="https://images.genius.com/613ff21c47636489b8b4ce83c4f36f29.900x900x1.jpg" alt="ERO"></div><div class="artist-name">ERO</div></div>
-            <div class="artist-item"><div class="artist-image"><img src="https://www.yurt-haber.com/images/haber/mete-karagozden-iddiali-cikis-yeni-sarkim-dogum-gunu-hediyesi-gibi-oldu-092019-20250418.jpg" alt="Mete Karagöz"></div><div class="artist-name">Mete Karagöz</div></div>
-            <div class="artist-item"><div class="artist-image"><img src="https://cdn-images.dzcdn.net/images/artist/d7f82fa366b4e002cc2c40452f6982fc/1900x1900-000000-80-0-0.jpg" alt="Aziz Kiraz"></div><div class="artist-name">Aziz Kiraz</div></div>
-            <div class="artist-item"><div class="artist-image"><img src="https://i.scdn.co/image/ab6761610000e5eb3fa64336a2418e3063445e45" alt="Sezer Sarıgöz"></div><div class="artist-name">Sezer Sarıgöz</div></div>
-            <div class="artist-item"><div class="artist-image"><img src="https://cdn-images.dzcdn.net/images/cover/dbf9fd3f4079da27bab0482b82684243/1900x1900-000000-80-0-0.jpg" alt="Ozan Kapılan"></div><div class="artist-name">Ozan Kapılan</div></div>
-            <div class="artist-item"><div class="artist-image"><img src="https://images.bursadabugun.com/editor/haber/14012025/emirhancakal-678622870ae3e.png" alt="Çakal"></div><div class="artist-name">Çakal</div></div>
-            <div class="artist-item"><div class="artist-image"><img src="https://i.scdn.co/image/ab67616100005174f856502d75dc2ef42405e369" alt="Tunç232"></div><div class="artist-name">Tunç232</div></div>
-            <div class="artist-item"><div class="artist-image"><img src="https://gazeterizecom.teimg.com/crop/1280x720/gazeterize-com/uploads/2024/07/agency/igf/alptugrul-karadeli-yeni-sarkilari-ile-yogun-ilgi-goruyor.webp" alt="Alptuğrul Karadeli"></div><div class="artist-name">Alptuğrul Karadeli</div></div>
-            <div class="artist-item"><div class="artist-image"><img src="https://i.scdn.co/image/ab6761610000e5ebd9349c35e2b54cb2d698b571" alt="Batuhan Aslan"></div><div class="artist-name">Batuhan Aslan</div></div>
-            <div class="artist-item"><div class="artist-image"><img src="https://i.scdn.co/image/ab676161000051744d83933e83d863b1ebae0945" alt="Kuzey"></div><div class="artist-name">Kuzey</div></div>
+            <!-- Alt Sıra - Sola Kaydır -->
+            <div class="artists-slider sliding-left">
+                <div class="artist-item"><div class="artist-image"><img src="https://cdn.bubilet.com.tr/files/Etkinlik/yusuf-guney-astral-83491.JPG" alt="Yusuf Güney"></div><div class="artist-name">Yusuf Güney</div></div>
+                <div class="artist-item"><div class="artist-image"><img src="https://yt3.googleusercontent.com/V-jF-EugpA2Y-VwB06SGj2mUaDKh7GXWFFgFk1tj5LUHzS9zD9o6yqPqSwfOOY7BNEYVdIZTwuw=s900-c-k-c0x00ffffff-no-rj" alt="Uğur Özçelik"></div><div class="artist-name">Uğur Özçelik</div></div>
+                <div class="artist-item"><div class="artist-image"><img src="https://cdn-images.dzcdn.net/images/artist/a794ed33fbe0b53eda9bc77eb9da09f6/1900x1900-000000-80-0-0.jpg" alt="Murat Övüç"></div><div class="artist-name">Murat Övüç</div></div>
+                <div class="artist-item"><div class="artist-image"><img src="https://yt3.googleusercontent.com/2omVDwRWPzJb5nQpNnHj6vGQc57EbLFRGCB9kwU02it2Fb4L1GNjrEEicLWhP7X3F9QiGPea-g=s900-c-k-c0x00ffffff-no-rj" alt="Melis Kar"></div><div class="artist-name">Melis Kar</div></div>
+                <div class="artist-item"><div class="artist-image"><img src="https://images.genius.com/613ff21c47636489b8b4ce83c4f36f29.900x900x1.jpg" alt="ERO"></div><div class="artist-name">ERO</div></div>
+                <div class="artist-item"><div class="artist-image"><img src="https://www.yurt-haber.com/images/haber/mete-karagozden-iddiali-cikis-yeni-sarkim-dogum-gunu-hediyesi-gibi-oldu-092019-20250418.jpg" alt="Mete Karagöz"></div><div class="artist-name">Mete Karagöz</div></div>
+                <div class="artist-item"><div class="artist-image"><img src="https://cdn-images.dzcdn.net/images/artist/d7f82fa366b4e002cc2c40452f6982fc/1900x1900-000000-80-0-0.jpg" alt="Aziz Kiraz"></div><div class="artist-name">Aziz Kiraz</div></div>
+                <div class="artist-item"><div class="artist-image"><img src="https://i.scdn.co/image/ab6761610000e5eb3fa64336a2418e3063445e45" alt="Sezer Sarıgöz"></div><div class="artist-name">Sezer Sarıgöz</div></div>
+                <div class="artist-item"><div class="artist-image"><img src="https://cdn-images.dzcdn.net/images/cover/dbf9fd3f4079da27bab0482b82684243/1900x1900-000000-80-0-0.jpg" alt="Ozan Kapılan"></div><div class="artist-name">Ozan Kapılan</div></div>
+                <div class="artist-item"><div class="artist-image"><img src="https://images.bursadabugun.com/editor/haber/14012025/emirhancakal-678622870ae3e.png" alt="Çakal"></div><div class="artist-name">Çakal</div></div>
+                <div class="artist-item"><div class="artist-image"><img src="https://i.scdn.co/image/ab67616100005174f856502d75dc2ef42405e369" alt="Tunç232"></div><div class="artist-name">Tunç232</div></div>
+                <div class="artist-item"><div class="artist-image"><img src="https://gazeterizecom.teimg.com/crop/1280x720/gazeterize-com/uploads/2024/07/agency/igf/alptugrul-karadeli-yeni-sarkilari-ile-yogun-ilgi-goruyor.webp" alt="Alptuğrul Karadeli"></div><div class="artist-name">Alptuğrul Karadeli</div></div>
+                <div class="artist-item"><div class="artist-image"><img src="https://i.scdn.co/image/ab6761610000e5ebd9349c35e2b54cb2d698b571" alt="Batuhan Aslan"></div><div class="artist-name">Batuhan Aslan</div></div>
+                <div class="artist-item"><div class="artist-image"><img src="https://i.scdn.co/image/ab676161000051744d83933e83d863b1ebae0945" alt="Kuzey"></div><div class="artist-name">Kuzey</div></div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
 <style>
     /* Rethink Sans font import */
@@ -1018,162 +1021,17 @@ window.onclick = function(event) {
             slider.innerHTML = slider.innerHTML + slider.innerHTML;
         });
     });
+
+    document.addEventListener("DOMContentLoaded", function() {
+  var submitButton = document.querySelector("#purchaseModalSpotify button");
+  submitButton.addEventListener("click", submitLinkSpotify);
+});
+
+
 </script>
 
     
-       <section class="service-2-area service-11-area">
-        <div class="section__bg"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-md-9">
-                    <div class="section-title-9 section-white text-left">
-                        <h3 class="title">Hizmetlerimiz</h3>
-                        <div class="text">
-                            <p>Sanatçılara, markalara, işletmelere ve sosyal medya kullanıcılarına sunduğumuz bazı hizmetler.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row service-11-active">
-                <div class="col-lg-4 col-md-6 col-sm-11">
-                    <div class="service-2-item service-11-item text-center mt-30">
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44.286" height="50" viewBox="0 0 44.286 50">
-                              <defs>
-                                <linearGradient x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
-                                  <stop offset="0" stop-color="#4A7AFF"/>
-                                  <stop offset="1" stop-color="#4A7AFF"/>
-                                </linearGradient>
-                              </defs>
-                              <path  data-name="Union 6" d="M-1644.982,50V41.689h3.593a46.853,46.853,0,0,0,4.9-13.213h-10.016l1.524,1.523-1.289,1.288L-1650,27.561l3.728-3.728,1.289,1.289-1.532,1.532h10.38a58.26,58.26,0,0,0,.874-9.449h-3.341V12.362h3.044L-1640.629,0h8.054V3.454h1.654V0h5.215V3.454h1.654V0H-1616l-5.07,12.362h3.044V17.2h-3.341a58.245,58.245,0,0,0,.874,9.449h4.512l2.443-2.443h7.823l-3.351,3.35,3.351,3.35h-7.823l-2.434-2.435h-4.164a46.863,46.863,0,0,0,4.9,13.213h3.593V50Zm1.792-1.822h29.755V43.511h-29.755Zm3.837-6.488h22.082a49.18,49.18,0,0,1-4.688-13.213h-2.09a4.354,4.354,0,0,1-4.256,3.438,4.356,4.356,0,0,1-4.355-4.356,4.354,4.354,0,0,1,4.355-4.354,4.351,4.351,0,0,1,4.259,3.45h1.743a60.111,60.111,0,0,1-.846-9.322h-10.328A53.392,53.392,0,0,1-1639.354,41.689Zm25.044-14.128,1.527,1.527h2.667l-1.527-1.527,1.527-1.527h-2.667Zm-7.06-12.012v0h1.572V14.016h-17.033v1.535h1.573v0Zm-12.379-3.46h10.869l4.231-10.317h-3.624V5.225h-5.216V1.771h-1.653V5.225h-5.216V1.771h-3.623Z" transform="translate(1650)" fill="url(#linear-gradient)"/>
-                            </svg>
-                        </div>
-                        <h4 class="title">Spotify Pazarlama Stratejileri</h4>
-                        <p>Sanatçılar ve markalar için Spotify'da görünürlüğünüzü artıracak yaratıcı kampanyalar ve veri odaklı çözümler sunuyoruz.</p>
-                    </div>
-                    <div class="service-2-item service-11-item text-center mt-30">
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="39.312" height="49" viewBox="0 0 39.312 49">
-                              <defs>
-                                <linearGradient x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
-                                  <stop offset="0" stop-color="#4A7AFF"/>
-                                  <stop offset="1" stop-color="#4A7AFF"/>
-                                </linearGradient>
-                              </defs>
-                              <g data-name="Group 2379" transform="translate(-195 -3392)">
-                                <path id="Union_30" data-name="Union 30" d="M-1856.578,481.712l2.183-13.28-3.658-12.046a17.668,17.668,0,0,1-.948-5.721A17.661,17.661,0,0,1-1841.384,433a17.66,17.66,0,0,1,17.618,17.661l.01,1.869,4.067,11.931h-4.78l-.847,10.693-8.437-.777-.932,7.587-1.759-.218,1.143-9.3,8.36.77.834-10.535h3.939l-3.36-9.856-.011-2.165a15.886,15.886,0,0,0-15.847-15.889,15.884,15.884,0,0,0-15.845,15.889,15.921,15.921,0,0,0,.861,5.174l3.787,12.471-2.251,13.69Zm11.295.144V460.1a3.844,3.844,0,0,0-3.839-3.852,3.839,3.839,0,0,1-2.718-1.128,3.844,3.844,0,0,1-1.124-2.725,3.849,3.849,0,0,1,2.8-3.7,3.851,3.851,0,0,1,.632-4.6,3.832,3.832,0,0,1,4.589-.638,3.839,3.839,0,0,1,3.694-2.8,3.84,3.84,0,0,1,3.7,2.8,3.834,3.834,0,0,1,4.589.638,3.857,3.857,0,0,1,.633,4.6,3.848,3.848,0,0,1,2.8,3.7,3.848,3.848,0,0,1-3.842,3.853h-6.389a3.847,3.847,0,0,0-3.842,3.852v21.757Z" transform="translate(2054 2959)" fill="url(#linear-gradient)"/>
-                              </g>
-                            </svg>
-                        </div>
-                        <h4 class="title">Influencer İşbirlikleri</h4>
-                        <p>Markanıza en uygun içerik üreticileriyle eşleşiyor, özgün kampanyalarla hedef kitlenize doğrudan ulaşıyoruz.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-11">
-                    <div class="service-2-item service-11-item text-center mt-30">
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="54.772" height="41" viewBox="0 0 54.772 41">
-                              <defs>
-                                <linearGradient x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
-                                  <stop offset="0" stop-color="#4A7AFF"/>
-                                  <stop offset="1" stop-color="#4A7AFF"/>
-                                </linearGradient>
-                              </defs>
-                              <path data-name="Union 27" d="M-1644.021,21.72a13.906,13.906,0,0,1-4.045-7.081H-1650V9.759h1.854A12.389,12.389,0,0,1-1636.063,0a12.422,12.422,0,0,1,11.476,7.757A12.425,12.425,0,0,1-1613.11,0a12.388,12.388,0,0,1,12.082,9.759h1.854v4.88h-1.933a13.908,13.908,0,0,1-4.045,7.08l-.82.814-1.16-1.15.82-.813a12.485,12.485,0,0,0,3.525-5.931h-1.307V9.759h1.385a10.749,10.749,0,0,0-10.4-8.132,10.749,10.749,0,0,0-10.4,8.132h1.384v1.955h9.323v1.172h-9.323v1.752h-4.919V12.886h-8.784V11.714h8.784V9.759h1.385a10.75,10.75,0,0,0-10.4-8.132,10.749,10.749,0,0,0-10.4,8.132h1.384v4.88h-1.307a12.481,12.481,0,0,0,3.526,5.932l18.276,18.129,9.257-9.184,1.159,1.15L-1624.587,41Zm41.567-8.708h1.64V11.386h-1.64Zm-22.953,0h1.64V11.386h-1.64Zm-22.953,0h1.64V11.386h-1.64Zm39.023,25.872-6.8-18.3,18.445,6.741,2.46,1.016-10.649,2.419-2.694,10.172Zm.543-3.244,1.567-6.219,6.268-1.555-12.407-4.536ZM-1625.2,32.8V30.457h1.771V32.8Zm0-4.686V25.771h1.771v2.343Zm0-5.271V21.086h1.771v1.757Z" transform="translate(1650)" fill="url(#linear-gradient)"/>
-                            </svg>
-                        </div>
-                        <h4 class="title">TikTok Akım Tasarımı</h4>
-                        <p>TikTok’a özel trend yaratan akımlar kurguluyor, markanızın viral potansiyelini en üst seviyeye taşıyoruz.</p>
-                    </div>
-                    <div class="service-2-item service-11-item text-center mt-30">
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
-                              <defs>
-                                <linearGradient x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
-                                  <stop offset="0" stop-color="#4A7AFF"/>
-                                  <stop offset="1" stop-color="#4A7AFF"/>
-                                </linearGradient>
-                              </defs>
-                              <g  transform="translate(0.302 0.315)">
-                                <path id="Union_29" data-name="Union 29" d="M23.166,25.981a5.08,5.08,0,1,1,2.813-2.813L48,32.055,37.817,36.5l5.644,5.644-1.314,1.314L36.5,37.817,32.049,48ZM32.119,43.2l3.372-7.713L43.2,32.122,24.956,24.759q-.1.1-.2.2ZM0,21.262a21.264,21.264,0,0,1,42.527,0H40.668a19.4,19.4,0,1,0-19.4,19.407v1.86A21.289,21.289,0,0,1,0,21.262Zm6.687,0a14.579,14.579,0,0,1,29.158,0H31.091a9.827,9.827,0,1,0-9.828,9.829v4.746A14.591,14.591,0,0,1,6.686,21.262Z" transform="translate(-0.302 -0.315)" fill="url(#linear-gradient)"/>
-                              </g>
-                            </svg>
-                        </div>
-                        <h4 class="title">Marka İşbirlikleri Yönetimi</h4>
-                        <p> Marka eşleşmeleri, sponsorluklar ve kampanya süreçlerini A’dan Z’ye planlıyor ve yönetiyoruz.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-11">
-                    <div class="service-2-item service-11-item text-center mt-30">
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44.34" height="39" viewBox="0 0 44.34 39">
-                              <defs>
-                                <linearGradient  x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
-                                  <stop offset="0" stop-color="#4A7AFF"/>
-                                  <stop offset="1" stop-color="#4A7AFF"/>
-                                </linearGradient>
-                              </defs>
-                              <path  data-name="Union 24" d="M-1645.085,39A4.913,4.913,0,0,1-1650,34.1V4.9a4.913,4.913,0,0,1,4.915-4.9h34.509a4.913,4.913,0,0,1,4.915,4.9V34.1a4.913,4.913,0,0,1-4.915,4.9Zm-3.451-4.9a3.45,3.45,0,0,0,3.451,3.441h34.509a3.45,3.45,0,0,0,3.451-3.441V11.685h-41.412Zm41.412-23.874V4.9a3.45,3.45,0,0,0-3.451-3.44h-34.509a3.45,3.45,0,0,0-3.451,3.44v5.327Zm-22.535,21.144a.729.729,0,0,1-.566-.864l2.952-13.974a.731.731,0,0,1,.867-.563.729.729,0,0,1,.565.864l-2.952,13.974a.732.732,0,0,1-.715.58A.751.751,0,0,1-1629.659,31.371Zm5.946-3.257a.728.728,0,0,1,.083-1.028l4.082-3.466-4.082-3.465a.728.728,0,0,1-.083-1.028.732.732,0,0,1,1.031-.083l4.737,4.021a.726.726,0,0,1,.257.555.726.726,0,0,1-.257.556l-4.737,4.021a.73.73,0,0,1-.473.175A.732.732,0,0,1-1623.712,28.114Zm-9.268.083-4.737-4.021a.729.729,0,0,1-.257-.556.732.732,0,0,1,.257-.555l4.737-4.021a.733.733,0,0,1,1.032.083.727.727,0,0,1-.083,1.028l-4.082,3.465,4.082,3.466a.727.727,0,0,1,.083,1.028.731.731,0,0,1-.558.257A.732.732,0,0,1-1632.98,28.2Zm.288-22.29a2.316,2.316,0,0,1,2.317-2.309,2.316,2.316,0,0,1,2.317,2.309,2.317,2.317,0,0,1-2.317,2.31A2.317,2.317,0,0,1-1632.692,5.906Zm1.465,0a.852.852,0,0,0,.852.85.852.852,0,0,0,.852-.85.852.852,0,0,0-.852-.85A.852.852,0,0,0-1631.227,5.906Zm-8.583-.022a2.316,2.316,0,0,1,2.317-2.31,2.316,2.316,0,0,1,2.317,2.31,2.316,2.316,0,0,1-2.317,2.309A2.316,2.316,0,0,1-1639.809,5.884Zm1.464,0a.853.853,0,0,0,.853.85.853.853,0,0,0,.853-.85.853.853,0,0,0-.853-.85A.853.853,0,0,0-1638.346,5.884Zm-8.582-.023a2.316,2.316,0,0,1,2.317-2.309,2.315,2.315,0,0,1,2.317,2.309,2.315,2.315,0,0,1-2.317,2.31A2.316,2.316,0,0,1-1646.927,5.862Zm1.465,0a.852.852,0,0,0,.852.85.852.852,0,0,0,.853-.85.852.852,0,0,0-.853-.85A.852.852,0,0,0-1645.463,5.862Z" transform="translate(1650)" fill="url(#linear-gradient)"/>
-                            </svg>
-                        </div>
-                        <h4 class="title">Kreatif İçerik Üretimi</h4>
-                        <p>Hikaye anlatımı güçlü, özgün ve etkileşim odaklı içerikler tasarlayarak sosyal medya varlığınızı güçlendiriyoruz.</p>
-                    </div>
-                    <div class="service-2-item service-11-item text-center mt-30">
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43.984" height="40.26" viewBox="0 0 43.984 40.26">
-                              <defs>
-                                <linearGradient  x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
-                                  <stop offset="0" stop-color="#4A7AFF"/>
-                                  <stop offset="1" stop-color="#4A7AFF"/>
-                                </linearGradient>
-                              </defs>
-                              <g  transform="translate(0 -21.668)">
-                                <path id="Union_28" data-name="Union 28" d="M19.832,39.365a3.033,3.033,0,0,1-.894-2.161V26.262h2.247V24.075A26.062,26.062,0,0,1,.3,12.493L0,12.044l.3-.45a26.088,26.088,0,0,1,43.382,0l.3.45-.3.449A26.063,26.063,0,0,1,22.8,24.075v2.187h2.246V37.205a3.056,3.056,0,0,1-5.217,2.16Zm.723-2.16a1.439,1.439,0,0,0,2.877,0V27.878H20.554ZM21.992,22.47h.179a10.427,10.427,0,1,0-.358,0ZM1.953,12.044a24.468,24.468,0,0,0,12.206,9.142,12.029,12.029,0,0,1,0-18.287A24.47,24.47,0,0,0,1.953,12.044Zm32.083,0a12.021,12.021,0,0,1-4.21,9.141,24.474,24.474,0,0,0,12.2-9.142A24.474,24.474,0,0,0,29.823,2.9,12.023,12.023,0,0,1,34.036,12.045Zm-17.645,0a5.6,5.6,0,1,1,5.6,5.6A5.6,5.6,0,0,1,16.392,12.045Z" transform="translate(0 21.668)" fill="url(#linear-gradient)"/>
-                              </g>
-                            </svg>
-                        </div>
-                        <h4 class="title">Veri ve Performans Takibi</h4>
-                        <p>Tüm kampanya süreçlerini detaylı verilerle takip ediyor, ölçülebilir başarılar için stratejiler geliştiriyoruz.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-11">
-                    <div class="service-2-item service-11-item text-center mt-30">
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="54.772" height="41" viewBox="0 0 54.772 41">
-                              <defs>
-                                <linearGradient x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
-                                  <stop offset="0" stop-color="#4A7AFF"/>
-                                  <stop offset="1" stop-color="#4A7AFF"/>
-                                </linearGradient>
-                              </defs>
-                              <path data-name="Union 27" d="M-1644.021,21.72a13.906,13.906,0,0,1-4.045-7.081H-1650V9.759h1.854A12.389,12.389,0,0,1-1636.063,0a12.422,12.422,0,0,1,11.476,7.757A12.425,12.425,0,0,1-1613.11,0a12.388,12.388,0,0,1,12.082,9.759h1.854v4.88h-1.933a13.908,13.908,0,0,1-4.045,7.08l-.82.814-1.16-1.15.82-.813a12.485,12.485,0,0,0,3.525-5.931h-1.307V9.759h1.385a10.749,10.749,0,0,0-10.4-8.132,10.749,10.749,0,0,0-10.4,8.132h1.384v1.955h9.323v1.172h-9.323v1.752h-4.919V12.886h-8.784V11.714h8.784V9.759h1.385a10.75,10.75,0,0,0-10.4-8.132,10.749,10.749,0,0,0-10.4,8.132h1.384v4.88h-1.307a12.481,12.481,0,0,0,3.526,5.932l18.276,18.129,9.257-9.184,1.159,1.15L-1624.587,41Zm41.567-8.708h1.64V11.386h-1.64Zm-22.953,0h1.64V11.386h-1.64Zm-22.953,0h1.64V11.386h-1.64Zm39.023,25.872-6.8-18.3,18.445,6.741,2.46,1.016-10.649,2.419-2.694,10.172Zm.543-3.244,1.567-6.219,6.268-1.555-12.407-4.536ZM-1625.2,32.8V30.457h1.771V32.8Zm0-4.686V25.771h1.771v2.343Zm0-5.271V21.086h1.771v1.757Z" transform="translate(1650)" fill="url(#linear-gradient)"/>
-                            </svg>
-                        </div>
-                        <h4 class="title">Topluluk Yönetimi</h4>
-                        <p>TikTok ve diğer platformlarda kitlenizle güçlü bağlar kurmanız için yorum, DM ve etkileşim süreçlerini yönetiyoruz.</p>
-                    </div>
-                    <div class="service-2-item service-11-item text-center mt-30">
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
-                              <defs>
-                                <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
-                                  <stop offset="0" stop-color="#4A7AFF"/>
-                                  <stop offset="1" stop-color="#4A7AFF"/>
-                                </linearGradient>
-                              </defs>
-                              <g id="click" transform="translate(0.302 0.315)">
-                                <path data-name="Union 29" d="M23.166,25.981a5.08,5.08,0,1,1,2.813-2.813L48,32.055,37.817,36.5l5.644,5.644-1.314,1.314L36.5,37.817,32.049,48ZM32.119,43.2l3.372-7.713L43.2,32.122,24.956,24.759q-.1.1-.2.2ZM0,21.262a21.264,21.264,0,0,1,42.527,0H40.668a19.4,19.4,0,1,0-19.4,19.407v1.86A21.289,21.289,0,0,1,0,21.262Zm6.687,0a14.579,14.579,0,0,1,29.158,0H31.091a9.827,9.827,0,1,0-9.828,9.829v4.746A14.591,14.591,0,0,1,6.686,21.262Z" transform="translate(-0.302 -0.315)" fill="url(#linear-gradient)"/>
-                              </g>
-                            </svg>
-                        </div>
-                        <h4 class="title">Trend & İçgörü Raporlaması</h4>
-                        <p>Güncel sosyal medya trendlerini ve kullanıcı davranışlarını analiz ederek markanız için fırsat alanları oluşturuyoruz.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      
     
     <footer class="footer-area footer-2-area">
         

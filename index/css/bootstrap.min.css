@@ -205,9 +205,12 @@
   th {
     text-align: inherit;
   }
-  label {
+ label {
     display: inline-block;
     margin-bottom: 0.5rem;
+    position: relative;
+    right: 6rem;
+    top: 1rem;
   }
   button {
     border-radius: 0;

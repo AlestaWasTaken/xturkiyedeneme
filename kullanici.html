@@ -232,6 +232,7 @@
     
     <section class="dynamic-pricing-area">
         <div class="container">
+          <h2 class="section-title" style="color: #000;">Paketler</h2>
           <div class="pricing-cards">
             
             <!-- Starter Paket -->
@@ -251,25 +252,6 @@
 <!-- YOUTUBE -->
            
 
-<script>
-  function submitLinkSpotify() {
-    var link = document.getElementById("spotifyLink").value;
-    var price = document.getElementById("finalPriceSpotify").textContent.trim();
-    
-    if (!link) {
-      alert("Lütfen Spotify linkinizi girin.");
-      return;
-    }
-
-    var phoneNumber = "905517477767"; // Türkiye için 90 başta
-    var message = `Merhaba, bir satın alma tamamlandı.%0AFiyat: ${price}%0ASpotify Linki: ${link}`;
-    var whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
-
-    window.open(whatsappURL, "_blank");
-  }
-</script>
-
-
 <!-- Modal -->
 <div id="purchaseModal" class="modal">
   <div class="modal-content">
@@ -287,49 +269,56 @@
 
 <!-- Kart 1: Kullanıcı Başına -->
 <!-- Kart 1: Kullanıcı Başına -->
-<!-- PRICING CARD -->
+
+
+
+<!-- Kart 2: Kullanıcılar  Başına -->
 <div class="pricing-card">
   <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a9/TikTok_logo.svg/640px-TikTok_logo.svg.png"
        alt="TikTok Logo" class="spotify-logo">
   <br>
-  <p class="listener-count" id="userCount">Minimum <strong>+10</strong> Kullanıcı</p>
+  <p class="listener-count" id="microInfluencerCount">Minimum <strong>+10</strong> Kullanıcı</p>
 
-  <div class="price" id="priceUser">₺200</div>
+  <div class="price" id="priceMicroInfluencer">₺200 </div>
 
   <div class="slider-container">
     <span class="slider-arrow">»</span>
-    <input type="range" id="sliderUser" min="10" max="100" value="10" step="1" oninput="updateUserSlider()">
+    <input type="range" id="sliderMicroInfluencer" min="10" max="100" value="10" step="1">
   </div>
   <br>
 
   <div class="yazilar">
-    <p><strong>%100 Organik TikTok Kullanıcıları ile Etkileşim Kazanın!</strong></p>
-    <p>• İçeriğiniz, hedef kitlenize uygun aktif TikTok kullanıcılarıyla gösterilir.</p>
+    <p><strong>%100 Organik Kullanıcılar ler ile Etkileşim Kazanın!</strong></p>
+    <p>• İçeriğiniz, yüksek etkileşimli Kullanıcılar lerle gösterilir.</p>
     <p>• Konum hedeflemesi: <strong>Türkiye</strong></p>
     <p>• Kampanya sona erdikten sonra bile etkileşim devam eder.</p>
     <p>• <strong>Bot ya da sahte yazılım işlemleri kesinlikle uygulanmaz.</strong></p>
     <p>• <strong>Kişiye özel TikTok planlaması için 10.00 - 18.00 saatleri arasında WhatsApp destek hattımızdan bize ulaşabilirsiniz.</strong></p>
   </div>
 
-  <a href="#" class="satinal" onclick="showModalTikTok()">Satın Al</a>
+  <a href="#" class="satinal" onclick="showModalTikTok('user')">Satın Al</a>
 </div>
 
-<!-- MODAL -->
-<div id="purchaseModalTikTok" class="modal" style="display:none;">
-  <div class="modal-content">
-    <span class="close" onclick="closeModalTikTok()">&times;</span>
-    <h3>Satın Alınıyor..</h3>
-    <p>Fiyat: <span id="finalPriceTikTok">₺200</span></p>
+<!-- Kart 3: %100 Keşfet Özel Şarkı Edit -->
 
-    <label for="tikTokLink">TikTok Linkinizi Girin:</label>
-    <input type="text" id="tikTokLink" placeholder="TikTok linkinizi buraya yazın">
+<script>
+ document.addEventListener("DOMContentLoaded", function() {
+  const slider = document.getElementById("sliderMicroInfluencer");
+  const priceElement = document.getElementById("priceMicroInfluencer");
+  const countElement = document.getElementById("microInfluencerCount");
+
+  slider.addEventListener("input", function() {
+    const value = this.value;
+    const calculatedPrice = value * 200;
     
-    <button onclick="submitLinkTikTok()">Gönder</button>
-  </div>
-</div>
-
-
-
+    // Virgülle binlik ayracı (10,000 gibi)
+    const formattedPrice = Number(calculatedPrice).toLocaleString('en-US');
+    
+    priceElement.textContent = `₺${formattedPrice.replace(/,/g, '.')}`;
+    countElement.innerHTML = `Minimum <strong>+${value}</strong> Kullanıcılar `;
+  });
+});
+</script>
 
 <div id="purchaseModalTikTok" class="modal" style="display:none;">
   <div class="modal-content">
@@ -337,11 +326,393 @@
     <h3>Satın Alma Tamamlandı!</h3>
     <p><strong>Fiyat:</strong> <span id="finalPriceTikTok">₺0 </span></p>
     <p><strong>Seçim:</strong> <span id="finalCountTikTok"></span></p>
+    <input type="text" id="tiktokName" placeholder="Adınız"> <!-- Eklendi -->
     <label for="tikTokLink">TikTok Linkinizi Girin:</label>
     <input type="text" id="tikTokLink" placeholder="TikTok linkinizi buraya yazın">
     <button onclick="submitLinkTikTok()">Gönder</button>
   </div>
 </div>
+
+<!-- TikTok Referans Slider - Responsive -->
+<section class="tiktok-ref-section">
+  <div class="container">
+    <h2>Kullanıcılar ile Yaratılan Etki</h2>
+    <p>Bu çalışmada videolarınız aşağıda örneklediğimiz şekilde çekilecektir.</p>
+    
+    <div class="tiktok-slider-container">
+      <div class="tiktok-slider">
+        <!-- Video 1 -->
+        <div class="tiktok-card">
+          <div class="tiktok-thumbnail">
+            <img src="https://p16-sign-sg.tiktokcdn.com/obj/tos-alisg-p-0037/oIAQAEhAjuxIPAffoAiqGPdhRA0DIEFegR4DGs?lk3s=b59d6b55&x-expires=1747342800&x-signature=3rXYmVKvnCdqvoYklyMzSmq7ioY%3D&shp=b59d6b55&shcp=-" alt="Örnek Çalışma 1">
+            <div class="tiktok-logo"><i class="fab fa-tiktok"></i></div>
+          </div>
+          <div class="tiktok-stats">
+            <span>❤️ 2.4K</span>
+            <span>💬 164</span>
+            <span>↗️ 1.2K</span>
+          </div>
+        </div>
+        
+        <!-- Video 2 -->
+        <div class="tiktok-card">
+          <div class="tiktok-thumbnail">
+            <img src="https://p16-sign-sg.tiktokcdn.com/obj/tos-alisg-p-0037/owDIBiwkEjzArXCuIBHAEKiA34gYjAf86mAGdw?lk3s=b59d6b55&x-expires=1747342800&x-signature=bcq8w5wC2%2BUtYJ5Ps3MoAOMIrhc%3D&shp=b59d6b55&shcp=-" alt="Örnek Çalışma 2">
+            <div class="tiktok-logo"><i class="fab fa-tiktok"></i></div>
+          </div>
+          <div class="tiktok-stats">
+            <span>❤️ 3.7K</span>
+            <span>💬 521</span>
+            <span>↗️ 943</span>
+          </div>
+        </div>
+        
+        <div class="tiktok-card">
+          <div class="tiktok-thumbnail">
+            <img src="https://p16-sign-sg.tiktokcdn.com/obj/tos-alisg-p-0037/oUBlQfA8IIv6KZADtaQIfGhEPQmZoNAeAA1LAj?lk3s=b59d6b55&x-expires=1747342800&x-signature=ZIl3DSHAgPdk3qzZEPYq6gxzb0M%3D&shp=b59d6b55&shcp=-" alt="Örnek Çalışma 2">
+            <div class="tiktok-logo"><i class="fab fa-tiktok"></i></div>
+          </div>
+          <div class="tiktok-stats">
+            <span>❤️ 1.7K</span>
+            <span>💬 964</span>
+            <span>↗️ 776</span>
+          </div>
+        </div>
+
+
+      </div>
+      
+      <div class="slider-controls">
+        <button class="slider-prev" aria-label="Önceki video"><i class="fas fa-chevron-left"></i></button>
+        <div class="slider-dots"></div>
+        <button class="slider-next" aria-label="Sonraki video"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Temel Stiller */
+.tiktok-ref-section {
+  padding: 3rem 1rem;
+  background: #f8f8f8;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.tiktok-ref-section h2 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.tiktok-ref-section p {
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  color: #555;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Slider Konteyner */
+.tiktok-slider-container {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Slider */
+.tiktok-slider {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding: 1rem 0;
+  scrollbar-width: none; /* Firefox */
+}
+
+.tiktok-slider::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+/* Kartlar */
+.tiktok-card {
+  scroll-snap-align: center;
+  flex: 0 0 auto;
+  width: 85%;
+  max-width: 300px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tiktok-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Thumbnail */
+.tiktok-thumbnail {
+  position: relative;
+  padding-top: 177.78%; /* 16:9 aspect ratio */
+  overflow: hidden;
+}
+
+.tiktok-thumbnail img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tiktok-logo {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+/* İstatistikler */
+.tiktok-stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 0.8rem;
+  background: #fff;
+  border-top: 1px solid #eee;
+  font-size: 0.8rem;
+}
+
+.tiktok-stats span {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* Kontroller */
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.slider-prev, .slider-next {
+  background: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-prev:hover, .slider-next:hover {
+  background: #ff0050;
+  color: white;
+}
+
+.slider-prev:disabled, .slider-next:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.slider-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ddd;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.dot.active {
+  background: #ff0050;
+  transform: scale(1.2);
+}
+
+/* Responsive Ayarlar */
+@media (min-width: 576px) {
+  .tiktok-card {
+    width: 70%;
+  }
+}
+
+@media (min-width: 768px) {
+  .tiktok-slider-container {
+    padding: 0 3rem;
+  }
+  
+  .tiktok-card {
+    width: 45%;
+    max-width: 350px;
+  }
+}
+
+@media (min-width: 992px) {
+  .tiktok-card {
+    width: 30%;
+  }
+  
+  .tiktok-slider {
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .tiktok-slider-container {
+    max-width: 1200px;
+  }
+}
+
+/* Touch device optimizasyonu */
+@media (hover: none) {
+  .tiktok-card:hover {
+    transform: none;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const slider = document.querySelector('.tiktok-slider');
+  const cards = document.querySelectorAll('.tiktok-card');
+  const prevBtn = document.querySelector('.slider-prev');
+  const nextBtn = document.querySelector('.slider-next');
+  const dotsContainer = document.querySelector('.slider-dots');
+  
+  let currentIndex = 0;
+  let autoScrollInterval;
+  
+  // Dot'ları oluştur
+  function createDots() {
+    dotsContainer.innerHTML = '';
+    cards.forEach((_, index) => {
+      const dot = document.createElement('div');
+      dot.classList.add('dot');
+      if(index === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => goToSlide(index));
+      dotsContainer.appendChild(dot);
+    });
+  }
+  
+  // Belirli bir slayta git
+  function goToSlide(index) {
+    currentIndex = index;
+    const card = cards[index];
+    const containerWidth = slider.offsetWidth;
+    const cardWidth = card.offsetWidth;
+    const scrollPos = card.offsetLeft - (containerWidth / 2) + (cardWidth / 2);
+    
+    slider.scrollTo({
+      left: scrollPos,
+      behavior: 'smooth'
+    });
+    
+    updateDots();
+    updateButtons();
+  }
+  
+  // Dot'ları güncelle
+  function updateDots() {
+    const dots = document.querySelectorAll('.dot');
+    dots.forEach((dot, index) => {
+      dot.classList.toggle('active', index === currentIndex);
+    });
+  }
+  
+  // Buton durumlarını güncelle
+  function updateButtons() {
+    prevBtn.disabled = currentIndex === 0;
+    nextBtn.disabled = currentIndex === cards.length - 1;
+  }
+  
+  // Otomatik kaydırmayı başlat
+  function startAutoScroll() {
+    autoScrollInterval = setInterval(() => {
+      if(currentIndex < cards.length - 1) {
+        goToSlide(currentIndex + 1);
+      } else {
+        goToSlide(0);
+      }
+    }, 5000);
+  }
+  
+  // Olay dinleyicileri
+  prevBtn.addEventListener('click', () => {
+    clearInterval(autoScrollInterval);
+    if(currentIndex > 0) {
+      goToSlide(currentIndex - 1);
+    }
+    startAutoScroll();
+  });
+  
+  nextBtn.addEventListener('click', () => {
+    clearInterval(autoScrollInterval);
+    if(currentIndex < cards.length - 1) {
+      goToSlide(currentIndex + 1);
+    }
+    startAutoScroll();
+  });
+  
+  // Slider scroll olayı
+  slider.addEventListener('scroll', () => {
+    clearInterval(autoScrollInterval);
+    const scrollPosition = slider.scrollLeft + (slider.offsetWidth / 2);
+    
+    cards.forEach((card, index) => {
+      const cardStart = card.offsetLeft;
+      const cardEnd = cardStart + card.offsetWidth;
+      
+      if(scrollPosition >= cardStart && scrollPosition <= cardEnd) {
+        currentIndex = index;
+        updateDots();
+        updateButtons();
+      }
+    });
+  });
+  
+  // Touch event için passive mode
+  slider.addEventListener('touchstart', null, { passive: true });
+  slider.addEventListener('touchmove', null, { passive: true });
+  
+  // İlk yükleme
+  createDots();
+  updateButtons();
+  startAutoScroll();
+  
+  // Resize event
+  window.addEventListener('resize', () => {
+    goToSlide(currentIndex);
+  });
+});
+</script>
 
 <!-- Modal için basit stil -->
 <style>
@@ -355,14 +726,25 @@
 }
 
 .modal-content {
-  background-color: #fff;
-  margin: 10% auto;
-  padding: 20px;
-  border-radius: 12px;
-  width: 90%;
-  max-width: 400px;
-  position: relative;
-  animation: fadeIn 0.3s ease-in-out;
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Mobil uyumluluk için medya sorgusu */
+@media (max-width: 480px) {
+    .modal-content {
+        width: 95%;
+        padding: 15px;
+        margin: 20% auto;
+    }
 }
 
 .close {
@@ -691,217 +1073,86 @@ input[type=range]::-moz-range-thumb:hover {
 
         </style>
 
-    <script>
-      // TikTok Kartları için Slider İşlevi
-const sliderUser = document.getElementById('sliderUser');
-const priceUser = document.getElementById('priceUser');
-const userCount = document.getElementById('userCount');
+   
 
-sliderUser.addEventListener('input', function() {
-  const userCountValue = parseInt(this.value);
-  const price = (userCountValue * 200).toFixed(2); // 200 TL fiyatı
-  userCount.innerHTML = `Minimum <strong>+${userCountValue}</strong> Kullanıcı`;
-  priceUser.textContent = `₺${parseFloat(price).toLocaleString('tr-TR')} `;
-});
-
-const sliderMicroInfluencer = document.getElementById('sliderMicroInfluencer');
-const priceMicroInfluencer = document.getElementById('priceMicroInfluencer');
-const microInfluencerCount = document.getElementById('microInfluencerCount');
-
-sliderMicroInfluencer.addEventListener('input', function() {
-  const microInfluencerCountValue = parseInt(this.value);
-  const price = (microInfluencerCountValue * 450).toFixed(2); // 450 TL fiyatı
-  microInfluencerCount.innerHTML = `Minimum <strong>+${microInfluencerCountValue}</strong> Mikro Fenomen`;
-  priceMicroInfluencer.textContent = `₺${parseFloat(price).toLocaleString('tr-TR')} `;
-});
-
-const sliderDiscoverEdit = document.getElementById('sliderDiscoverEdit');
-const priceDiscoverEdit = document.getElementById('priceDiscoverEdit');
-const discoverEditCount = document.getElementById('discoverEditCount');
-
-sliderDiscoverEdit.addEventListener('input', function() {
-  const discoverEditCountValue = parseInt(this.value);
-  const price = (discoverEditCountValue * 4000).toFixed(2); // 500 TL fiyatı
-  discoverEditCount.innerHTML = `Minimum <strong>+${discoverEditCountValue}</strong> Makro Fenomen`;
-  priceDiscoverEdit.textContent = `₺${parseFloat(price).toLocaleString('tr-TR')} `;
-});
-
-// Modal'ı gösterme fonksiyonu
-function showModalTikTok(cardType) {
-  const modal = document.getElementById('purchaseModalTikTok');
-  let price = '';
-  let count = '';
-
-  if (cardType === 'user') {
-    price = priceUser.textContent;
-    count = userCount.textContent;
-  } else if (cardType === 'microInfluencer') {
-    price = priceMicroInfluencer.textContent;
-    count = microInfluencerCount.textContent;
-  } else if (cardType === 'discoverEdit') {
-    price = priceDiscoverEdit.textContent;
-    count = discoverEditCount.textContent;
-  }
-
-  document.getElementById('finalPriceTikTok').textContent = price;
-  document.getElementById('finalCountTikTok').textContent = count;
-  modal.style.display = "block";
-}
-
-// Modal'ı kapatma fonksiyonu
-function closeModalTikTok() {
-  const modal = document.getElementById('purchaseModalTikTok');
-  modal.style.display = "none";
-}
-
-function submitLinkTikTok() {
-  const tikTokLink = document.getElementById('tikTokLink').value;
-  const finalPrice = document.getElementById('finalPriceTikTok').textContent.trim();
-  const followerCount = document.getElementById('sliderUser').value;
-
-  if (tikTokLink) {
-    const phoneNumber = "905517477767";
-    const message = `Merhaba, bir TikTok siparişi oluşturuldu.%0AFiyat: ${finalPrice}%0Aİstenilen Kişi Sayısı: ${followerCount}%0ATikTok Linki: ${tikTokLink}%0A%0ANOT: Bu işlem kullanıcı paketi için gerçekleştirilmiştir.`;
-    const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
-    window.open(whatsappURL, "_blank");
-  } else {
-    alert("Lütfen geçerli bir TikTok linki girin.");
-  }
-}
-
-
-// Modal dışına tıklandığında kapanmasını sağlamak için
-window.onclick = function(event) {
-  const modal = document.getElementById('purchaseModalTikTok');
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
-    </script>
 
 <script>
-const sliderStarter = document.getElementById('sliderStarter');
-const priceStarter = document.getElementById('priceStarter');
-const listenerCount = document.getElementById('listenerCount');
+    // TikTok Kartları için Slider İşlevi
+    const sliderMicroInfluencer = document.getElementById('sliderMicroInfluencer');
+    const priceMicroInfluencer = document.getElementById('priceMicroInfluencer');
+    const microInfluencerCount = document.getElementById('microInfluencerCount');
 
-sliderStarter.addEventListener('input', function () {
-  const dinleyici = parseInt(this.value);
-  const fiyat = (dinleyici * 0.80).toFixed(2); // ondalıklı ₺
+    sliderMicroInfluencer.addEventListener('input', function() {
+      const microInfluencerCountValue = parseInt(this.value);
+      const price = (microInfluencerCountValue * 200).toFixed(2);
+      microInfluencerCount.innerHTML = `Minimum <strong>+${microInfluencerCountValue.toLocaleString('tr-TR')}</strong> Kullanıcılar `;
+      priceMicroInfluencer.textContent = `₺${parseFloat(price).toLocaleString('tr-TR')}`;
+    });
 
-  // Dinleyici sayısını "Minimum +2.000 Dinleyici" şeklinde yaz
-  listenerCount.innerHTML = `Minimum +<strong>${dinleyici.toLocaleString('tr-TR')}</strong> Dinleyici veya Dinlenme`;
+    // Modal'ı gösterme fonksiyonu
+    function showModalTikTok() {
+      const modal = document.getElementById('purchaseModalTikTok');
+      const price = priceMicroInfluencer.textContent;
+      const count = microInfluencerCount.textContent;
 
-  // Fiyatı yaz
-  priceStarter.textContent = `₺${parseFloat(fiyat).toLocaleString('tr-TR')} `;
-});
-  </script>
+      document.getElementById('finalPriceTikTok').textContent = price;
+      document.getElementById('finalCountTikTok').textContent = count;
+      modal.style.display = "block";
+    }
 
-  <script>
-const sliderYouTube = document.getElementById('sliderYouTube');
-const priceYouTube = document.getElementById('priceYouTube');
-const viewCount = document.getElementById('viewCount');
+    // Modal'ı kapatma fonksiyonu
+    function closeModalTikTok() {
+      const modal = document.getElementById('purchaseModalTikTok');
+      modal.style.display = "none";
+    }
 
-sliderYouTube.addEventListener('input', function () {
-  const izlenme = parseInt(this.value);
-  const fiyat = (izlenme * 0.08).toFixed(2); // 10.000 izlenme 800 TL => 0.08 TL başı
+    // TikTok Linki Gönderme ve WhatsApp'a yönlendirme
+    function submitLinkTikTok() {
+      const name = document.getElementById('tiktokName').value;
+      const tikTokLink = document.getElementById('tikTokLink').value;
+      const finalPrice = document.getElementById('finalPriceTikTok').textContent;
+      const finalCount = document.getElementById('finalCountTikTok').textContent;
 
-  viewCount.innerHTML = `Minimum +<strong>${izlenme.toLocaleString('tr-TR')}</strong> İzlenme`;
-  priceYouTube.textContent = `₺${parseFloat(fiyat).toLocaleString('tr-TR')} `;
-});
+      if (tikTokLink) {
+        // WhatsApp mesajı oluştur
+        const phoneNumber = "905517477767"; // Gerçek WhatsApp numarasıyla değiştirin
+        const message = `Merhaba, adım ${name} TikTok hizmeti satın almak istiyorum.\n\n` +
+                       `Paket Bilgisi: ${finalCount}\n` +
+                       `Fiyat: ${finalPrice}\n` +
+                       `TikTok Linki: ${tikTokLink}\n\n` +
+                       `Ödeme yapmak ve siparişi tamamlamak istiyorum.`;
+        
+        // WhatsApp'a yönlendirme
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
+        
+        closeModalTikTok();
+      } else {
+        alert("Lütfen geçerli bir TikTok linki girin.");
+      }
+    }
 
-// Modal'ı gösterme fonksiyonu
-function showModal(event) {
-  event.preventDefault();  // Sayfanın yenilenmesini engeller
-
-  const modal = document.getElementById('purchaseModal');
-  const priceYouTube = document.getElementById('priceYouTube').textContent;
   
-  // Fiyatı modalda güncelle
-  document.getElementById('finalPrice').textContent = priceYouTube;
-  
-  // Modal'ı göster
-  modal.style.display = "block";
-}
+      
 
-// Modal'ı kapatma fonksiyonu
-function closeModal() {
-  const modal = document.getElementById('purchaseModal');
-  modal.style.display = "none"; // Modal'ı gizle
-}
-
-// YouTube linki gönderildiğinde yapılacak işlem
-function submitLink() {
-  const youtubeLink = document.getElementById('youtubeLink').value;
-  const finalPrice = document.getElementById('finalPrice').textContent;
-
-  if (youtubeLink) {
-    // Ödeme sayfasına yönlendirme yapılacak URL
-    const paymentUrl = `https://yourpaymentgateway.com/payment?price=${encodeURIComponent(finalPrice)}&link=${encodeURIComponent(youtubeLink)}`;
-
-    // Yönlendirme işlemi
-    window.location.href = paymentUrl;
-  } else {
-    alert("Lütfen geçerli bir YouTube linki girin.");
-  }
-}
-
-// Modal dışına tıklandığında kapanmasını sağlamak için
-window.onclick = function(event) {
-  const modal = document.getElementById('purchaseModal');
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
-
-// Modal'ı gösterme fonksiyonu
-function showModal(event) {
-  event.preventDefault();  // Sayfanın yenilenmesini engeller
-
-  const modal = document.getElementById('purchaseModalSpotify');
-  const priceStarter = document.getElementById('priceStarter').textContent;
-  
-  // Fiyatı modalda güncelle
-  document.getElementById('finalPriceSpotify').textContent = priceStarter;
-  
-  // Modal'ı göster
-  modal.style.display = "block";
-}
-
-// Modal'ı kapatma fonksiyonu
-function closeModal() {
-  const modal = document.getElementById('purchaseModalSpotify');
-  modal.style.display = "none"; // Modal'ı gizle
-}
-
-// Spotify linki gönderildiğinde yapılacak işlem
-function submitLinkSpotify() {
-  const spotifyLink = document.getElementById('spotifyLink').value;
-  const finalPrice = document.getElementById('finalPriceSpotify').textContent;
-
-  if (spotifyLink) {
-    // Ödeme sayfasına yönlendirme yapılacak URL
-    const paymentUrl = `https://yourpaymentgateway.com/payment?price=${encodeURIComponent(finalPrice)}&link=${encodeURIComponent(spotifyLink)}`;
-
-    // Yönlendirme işlemi
-    window.location.href = paymentUrl;
-  } else {
-    alert("Lütfen geçerli bir Spotify linki girin.");
-  }
-}
-
-// Modal dışına tıklandığında kapanmasını sağlamak için
-window.onclick = function(event) {
-  const modal = document.getElementById('purchaseModalSpotify');
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
-</script>
-
-
+    // Modal dışına tıklandığında kapanmasını sağlamak için
+    window.onclick = function(event) {
+      const modal = document.getElementById('purchaseModalTikTok');
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+      
+      const modalYoutube = document.getElementById('purchaseModal');
+      if (event.target == modalYoutube) {
+        modalYoutube.style.display = "none";
+      }
+      
+      const modalSpotify = document.getElementById('purchaseModalSpotify');
+      if (event.target == modalSpotify) {
+        modalSpotify.style.display = "none";
+      }
+    }
+    </script>
 
     
     <!--====== ABOUT 2 PART ENDS ======-->

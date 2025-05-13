@@ -73,7 +73,7 @@
     position: fixed; /* Changed from relative to fixed */
     top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%) scale(0.9); /* Combine transforms */
+    transform: translate(-55%, -60%) scale(1.1);
     z-index: 100000;
     }
 
@@ -125,7 +125,7 @@
         text-align: center;
         text-decoration: none;
         font-weight: bold;
-        border-radius: 8px;
+        border-radius: 10px;
         transition: all 0.3s ease;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         color: white;
@@ -243,6 +243,12 @@
             padding: 20px;
                     scale: 90%;
         }
+
+    .hero-main-title {
+        scale: 85%;
+        text-align: center; /* Yazıyı ortalar */
+    }
+
         
         .service-btn {
             padding: 15px;
@@ -606,9 +612,9 @@ function closeModal() {
                     <div class="col-lg-7">
                         <div class="hero-2-content hero-11-content">
                             <div class="hero-wrapper">
-    <h1 class="hero-main-title" >X Türkiye İle Tüm Dijital Reklam/Tanıtım İhtiyaçlarınız</h1>
+    <h1 class="hero-main-title" >Tüm Dijital Reklam/Tanıtım İhtiyaçlarınız</h1>
     <div class="hero-sub-text">
-        <p>Türkiye’nin Öncü Sanatçılar , Markalar Ve Sosyal Medya Kullanıcıları İçin Reklam / Tanıtım Platformu</p>
+        <p>Sanatçılar , Markalar Ve Sosyal Medya Kullanıcıları İçin Reklam / Tanıtım Platformu</p>
     </div>
     
     <ul class="hero-buttons" >
@@ -739,7 +745,7 @@ function closeModal() {
                                                 <a href="mikro.html" class="service-btn tiktok-btn">
                                                     <span>Mikro Fenomen Video Akım Reklam/Tanıtımları</span>
                                                 </a>
-                                                <a href="#" class="service-btn tiktok-btn">
+                                                <a href="makro.html" class="service-btn tiktok-btn">
                                                     <span>Makro Fenomen Video Akım Reklam/Tanıtımları</span>
                                                 </a>
                                                 <a href="kullanici.html" class="service-btn tiktok-btn">
@@ -824,7 +830,7 @@ function closeModal() {
 /* Başlık Stilleri */
 
 .hero-main-title {
-    font-size: 3.6rem;
+    font-size: 3rem;
     font-weight: 800;
     color: #000000;
     margin-bottom: 1.5rem;
@@ -833,34 +839,18 @@ function closeModal() {
     position: relative;
     display: inline-block;
     opacity: 1;
-     -webkit-text-stroke: 2px #000;
-  animation: liquidFill 3s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+
   bottom: 1px;
 }
 
 
 
 
-@keyframes liquidFill {
-  0% {
-    -webkit-text-stroke: 1px #000000;
-    color: transparent;
-    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
-  }
-  70% {
-    -webkit-text-stroke: 1px #000000;
-    color: transparent;
-  }
-  100% {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    color: #000000;
-    -webkit-text-stroke: 0;
-  }
-}
+
 
 
 .hero-sub-text {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     color: #000000;
     margin-bottom: 3rem;
     font-weight: 400;
@@ -1379,11 +1369,7 @@ function closeModal() {
     
     <!--====== FOOTER PART ENDS ======-->
 
-    <!--====== BACK TO TOP START ======-->
-    <a class="back-to-top back-to-top-11">
-        <i class="fal fa-angle-up"></i>
-    </a>
-    <!--====== BACK TO TOP ENDS ======-->
+
 
     <!--====== jquery js ======-->
     <script src="index/js/vendor/modernizr-3.6.0.min.js"></script>
