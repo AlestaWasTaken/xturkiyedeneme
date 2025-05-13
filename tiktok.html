@@ -1,0 +1,1185 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   
+    <!--====== Required meta tags ======-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!--====== Title ======-->
+    <title>XTurkiye</title>
+    
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="spotify/images/favicon.ico" type="image/png">
+
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="spotify/css/bootstrap.min.css">
+    
+    <!--====== Fontawesome css ======-->
+    <link rel="stylesheet" href="spotify/css/font-awesome.min.css">
+    
+    <!--====== Magnific Popup css ======-->
+    <link rel="stylesheet" href="spotify/css/magnific-popup.css">
+    
+    <!--====== animate css ======-->
+    <link rel="stylesheet" href="spotify/css/animate.min.css">
+    
+    <!--====== Slick css ======-->
+    <link rel="stylesheet" href="spotify/css/slick.css">
+    
+    <!--====== Default css ======-->
+    <link rel="stylesheet" href="spotify/css/default.css">
+    
+    <!--====== Style css ======-->
+    <link rel="stylesheet" href="spotify/css/style.css">
+  
+  
+</head>
+
+<body class="bg-white">
+
+    <!-- LOADER -->
+    <div class="preloader">
+        <div class="lds-ellipsis">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- END LOADER -->
+   
+    <!--====== HEADER PART START ======-->
+    <div class="x-header">
+    <div class="x-header-container">
+        <div class="x-header-row">
+            <div class="x-header-col">
+                <div class="x-nav-wrapper">
+                    <nav class="x-navbar">
+                        <!-- Logo - Light Version -->
+                        <a class="x-brand" href="index.html">
+                            <img src="index/images/xturkiye.png" alt="XTurkiye Logo" class="x-logo">
+                        </a>
+
+                        <!-- Mobile Toggle -->
+                        <button class="x-menu-toggle" type="button" data-toggle="collapse" data-target="#xMainMenu" aria-label="Menu" style="position: relative; right: 1rem">
+                            <span class="x-toggle-bar"></span>
+                            <span class="x-toggle-bar"></span>
+                            <span class="x-toggle-bar"></span>
+                        </button>
+
+                        <!-- Menu -->
+                        <div class="x-menu-collapse" id="xMainMenu">
+                            <ul class="x-nav-menu">
+                                <li class="x-nav-item">
+                                    <a class="x-nav-link" href="index.html">Anasayfa</a>
+                                </li>
+                                <li class="x-nav-item">
+                                    <a class="x-nav-link" href="#">Hakkımızda</a>
+                                </li>
+                                <li class="x-nav-item">
+                                    <a class="x-nav-link" href="#">Hizmetler</a>
+                                </li>
+                                <li class="x-nav-item">
+                                    <a class="x-nav-link" href="#">Referanslar</a>
+                                </li>
+                            </ul>
+                            
+                            <!-- Contact Button -->
+                            <div class="x-contact-btn">
+                                <a class="x-btn x-btn-primary" href="#">
+                                    <i class="fas fa-paper-plane"></i> İletişime Geç
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+  .x-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 20px 0;
+    transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+    backdrop-filter: blur(10px);
+    background: rgb(0, 0, 0);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.x-header.scrolled {
+    background: rgb(0, 0, 0);
+    padding: 10px 0;
+    backdrop-filter: blur(15px);
+}
+
+.x-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.x-logo {
+    height: 40px;
+    transition: all 0.3s ease;
+}
+
+.x-menu-toggle {
+    background: transparent;
+    border: none;
+    padding: 10px;
+    display: none;
+}
+
+.x-toggle-bar {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: white;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.x-menu-collapse {
+    display: flex;
+    align-items: center;
+}
+
+.x-nav-menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.x-nav-item {
+    margin: 0 15px;
+    position: relative;
+}
+
+.x-nav-link {
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 8px 0;
+    position: relative;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.x-nav-link:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #1DB954;
+    transition: width 0.3s ease;
+}
+
+.x-nav-link:hover:after {
+    width: 100%;
+}
+
+.x-contact-btn {
+    margin-left: 30px;
+}
+
+.x-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.x-btn-primary {
+    background: white;
+    color: #1DB954;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.x-btn-primary:hover {
+    background: #f1f1f1;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.x-btn i {
+    margin-right: 8px;
+}
+</style>
+   
+
+    <!--====== HEADER PART ENDS ======-->
+
+    <!--====== HERO PART START ======-->
+    
+
+    <!--====== HERO PART ENDS ======-->
+    <!--====== ABOUT 2 PART START ======-->
+    
+    <section class="dynamic-pricing-area">
+        <div class="container">
+          <h2 class="section-title" style="color: #000;">Paketler</h2>
+          <div class="pricing-cards">
+            
+            <!-- Starter Paket -->
+
+<!-- Modal -->
+<div id="purchaseModalSpotify" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h3>Satın Alma Tamamlandı!</h3>
+    <p>Fiyat: <span id="finalPriceSpotify">₺1.600 </span></p>
+    <label for="spotifyLink">Spotify Linkinizi Girin:</label>
+    <input type="text" id="spotifyLink" placeholder="Spotify linkinizi buraya yazın">
+    <button onclick="submitLinkSpotify()">Gönder</button>
+  </div>
+</div>
+
+<!-- YOUTUBE -->
+           
+
+<script>
+  function submitLinkSpotify() {
+    var link = document.getElementById("spotifyLink").value;
+    var price = document.getElementById("finalPriceSpotify").textContent.trim();
+    
+    if (!link) {
+      alert("Lütfen Spotify linkinizi girin.");
+      return;
+    }
+
+    var phoneNumber = "905517477767"; // Türkiye için 90 başta
+    var message = `Merhaba, bir satın alma tamamlandı.%0AFiyat: ${price}%0ASpotify Linki: ${link}`;
+    var whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+
+    window.open(whatsappURL, "_blank");
+  }
+</script>
+
+
+<!-- Modal -->
+<div id="purchaseModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h3>Satın Alma Tamamlandı!</h3>
+    <p>Fiyat: <span id="finalPrice">₺800 </span></p>
+    <label for="youtubeLink">YouTube Linkinizi Girin:</label>
+    <input type="text" id="youtubeLink" placeholder="YouTube linkinizi buraya yazın">
+    <button onclick="submitLink()">Gönder</button>
+  </div>
+</div>
+
+
+<!-- TikTok Kartları -->
+
+<!-- Kart 1: Kullanıcı Başına -->
+<!-- Kart 1: Kullanıcı Başına -->
+<!-- PRICING CARD -->
+<div class="pricing-card">
+  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a9/TikTok_logo.svg/640px-TikTok_logo.svg.png"
+       alt="TikTok Logo" class="spotify-logo">
+  <br>
+  <p class="listener-count" id="userCount">Minimum <strong>+10</strong> Kullanıcı</p>
+
+  <div class="price" id="priceUser">₺200</div>
+
+  <div class="slider-container">
+    <span class="slider-arrow">»</span>
+    <input type="range" id="sliderUser" min="10" max="100" value="10" step="1" oninput="updateUserSlider()">
+  </div>
+  <br>
+
+  <div class="yazilar">
+    <p><strong>%100 Organik TikTok Kullanıcıları ile Etkileşim Kazanın!</strong></p>
+    <p>• İçeriğiniz, hedef kitlenize uygun aktif TikTok kullanıcılarıyla gösterilir.</p>
+    <p>• Konum hedeflemesi: <strong>Türkiye</strong></p>
+    <p>• Kampanya sona erdikten sonra bile etkileşim devam eder.</p>
+    <p>• <strong>Bot ya da sahte yazılım işlemleri kesinlikle uygulanmaz.</strong></p>
+    <p>• <strong>Kişiye özel TikTok planlaması için 10.00 - 18.00 saatleri arasında WhatsApp destek hattımızdan bize ulaşabilirsiniz.</strong></p>
+  </div>
+
+  <a href="#" class="satinal" onclick="showModalTikTok()">Satın Al</a>
+</div>
+
+<!-- MODAL -->
+<div id="purchaseModalTikTok" class="modal" style="display:none;">
+  <div class="modal-content">
+    <span class="close" onclick="closeModalTikTok()">&times;</span>
+    <h3>Satın Alınıyor..</h3>
+    <p>Fiyat: <span id="finalPriceTikTok">₺200</span></p>
+
+    <label for="tikTokLink">TikTok Linkinizi Girin:</label>
+    <input type="text" id="tikTokLink" placeholder="TikTok linkinizi buraya yazın">
+    
+    <button onclick="submitLinkTikTok()">Gönder</button>
+  </div>
+</div>
+
+
+<!-- Kart 2: Mikro Fenomen Başına -->
+<div class="pricing-card">
+  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a9/TikTok_logo.svg/640px-TikTok_logo.svg.png"
+       alt="TikTok Logo" class="spotify-logo">
+  <br>
+  <p class="listener-count" id="microInfluencerCount">Minimum <strong>+10</strong> Mikro Fenomen</p>
+
+  <div class="price" id="priceMicroInfluencer">₺450 </div>
+
+  <div class="slider-container">
+    <span class="slider-arrow">»</span>
+    <input type="range" id="sliderMicroInfluencer" min="10" max="100" value="10" step="1">
+  </div>
+  <br>
+
+  <div class="yazilar">
+    <p><strong>%100 Organik Mikro Fenomenler ile Etkileşim Kazanın!</strong></p>
+    <p>• İçeriğiniz, yüksek etkileşimli mikro fenomenlerle gösterilir.</p>
+    <p>• Konum hedeflemesi: <strong>Türkiye</strong></p>
+    <p>• Kampanya sona erdikten sonra bile etkileşim devam eder.</p>
+    <p>• <strong>Bot ya da sahte yazılım işlemleri kesinlikle uygulanmaz.</strong></p>
+    <p>• <strong>Kişiye özel TikTok planlaması için 10.00 - 18.00 saatleri arasında WhatsApp destek hattımızdan bize ulaşabilirsiniz.</strong></p>
+  </div>
+
+  <a href="#" class="satinal" onclick="showModalTikTok('microInfluencer')">Satın Al</a>
+</div>
+
+<!-- Kart 3: %100 Keşfet Özel Şarkı Edit -->
+<div class="pricing-card">
+  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a9/TikTok_logo.svg/640px-TikTok_logo.svg.png"
+       alt="TikTok Logo" class="spotify-logo">
+  <br>
+  <p class="listener-count" id="discoverEditCount">Minimum <strong>+1</strong> Makro Fenomen</p>
+
+  <div class="price" id="priceDiscoverEdit">₺4000 </div>
+
+  <div class="slider-container">
+    <span class="slider-arrow">»</span>
+    <input type="range" id="sliderDiscoverEdit" min="1" max="25" value="1" step="1">
+  </div>
+  <br>
+
+  <div class="yazilar">
+    <p><strong>%100 Organik Keşfet ile Özel Şarkı Editi!</strong></p>
+    <p>• İçeriğiniz, keşfette yüksek etkileşimli TikTok kullanıcılarına gösterilir.</p>
+    <p>• Konum hedeflemesi: <strong>Türkiye</strong></p>
+    <p>• Kampanya sona erdikten sonra bile etkileşim devam eder.</p>
+    <p>• <strong>Bot ya da sahte yazılım işlemleri kesinlikle uygulanmaz.</strong></p>
+    <p>• <strong>Kişiye özel TikTok planlaması için 10.00 - 18.00 saatleri arasında WhatsApp destek hattımızdan bize ulaşabilirsiniz.</strong></p>
+  </div>
+
+  <a href="#" class="satinal" onclick="showModalTikTok('discoverEdit')">Satın Al</a>
+</div>
+
+<div id="purchaseModalTikTok" class="modal" style="display:none;">
+  <div class="modal-content">
+    <span class="close" onclick="closeModalTikTok()">&times;</span>
+    <h3>Satın Alma Tamamlandı!</h3>
+    <p><strong>Fiyat:</strong> <span id="finalPriceTikTok">₺0 </span></p>
+    <p><strong>Seçim:</strong> <span id="finalCountTikTok"></span></p>
+    <label for="tikTokLink">TikTok Linkinizi Girin:</label>
+    <input type="text" id="tikTokLink" placeholder="TikTok linkinizi buraya yazın">
+    <button onclick="submitLinkTikTok()">Gönder</button>
+  </div>
+</div>
+
+<!-- Modal için basit stil -->
+<style>
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.close {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+</style>
+          </div>
+        </div>
+
+        
+      </section>
+      <style>
+/* Modal Arka Planı */
+.modal {
+  display: none; /* Başlangıçta gizli */
+  position: fixed; /* Sabit pozisyon */
+  z-index: 1; /* Ön planda olmasını sağlar */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Koyu arka plan */
+}
+
+/* Modal İçeriği */
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Modal Kapatma Butonu */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#purchaseModal input {
+  padding: 10px;
+  margin: 10px 0;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#purchaseModal button {
+  padding: 10px 20px;
+  background-color: #7d5fff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#purchaseModal button:hover {
+  background-color: #6c4ed3;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  background: #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: background 0.3s;
+}
+.spotify-logo {
+  width: 120px;
+  margin: 0 auto -20px;
+  display: block;
+}
+
+
+.satinal{
+    display: inline-block;
+    width: 18rem;
+          padding: 10px 24px;
+          background: #000000;
+          color: white;
+          text-decoration: none;
+          border-radius: 50px;
+          border: 2px solid #ff7a00;
+        }
+
+.yazilar{
+    font-weight: 550;
+    color: #000;
+    font-family: 'Poppins';
+}
+
+.listener-count {
+  font-size: 2rem; /* 2rem yerine biraz daha dengeli olabilir */
+  font-weight: 600; /* 350 yerine geçerli ve daha net bir değer */
+  color: #000;
+  margin-top: 8px;
+  font-family: 'Rethink Sans';
+}
+
+.listener-count strong {
+  font-weight: 900;
+  margin-right: 4px; /* Sayıdan sonraki boşluk için */
+}
+
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.slider-arrow {
+    font-size: 40px;
+    color: #000; /* Ok simgesinin rengi */
+    cursor: pointer;
+}
+
+
+input[type=range]:hover {
+  background: #ccc;
+}
+
+/* Chrome, Safari, Edge */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 2px solid #7d5fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+  background: #f1f1f1;
+  transform: scale(1.1);
+}
+
+/* Firefox */
+input[type=range]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 2px solid #7d5fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+input[type=range]::-moz-range-thumb:hover {
+  background: #f1f1f1;
+  transform: scale(1.1);
+}
+
+        .dynamic-pricing-area {
+          background: #f9f9fb;
+          padding: 80px 20px;
+          font-family: 'Poppins', sans-serif;
+        }
+        
+        .section-title {
+          text-align: center;
+          font-size: 36px;
+          margin-bottom: 60px;
+          color: #000;
+          font-family: 'Rethink Sans';
+        }
+        
+        .pricing-cards {
+            font-family: 'Poppins';
+          display: flex;
+          justify-content: center;
+          gap: 30px;
+          flex-wrap: wrap;
+        }
+        
+        .pricing-card {
+          background: white;
+          border-radius: 20px;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+          padding: 30px 25px;
+          max-width: 320px;
+          flex: 1;
+          text-align: center;
+          transition: transform 0.3s ease;
+        }
+        
+        .pricing-card:hover {
+          transform: translateY(-5px);
+        }
+        
+        .pricing-card.active {
+          border: 2px solid #7d5fff;
+        }
+        
+        .pricing-card h3 {
+          font-size: 24px;
+          color: #222;
+        }
+        
+        .price {
+          font-size: 21px;
+          color: #000000;
+          margin: 20px 0;
+          font-weight: bold;
+        }
+        
+        input[type=range] {
+          width: 100%;
+          margin: 20px 0;
+          accent-color: #1DB954;
+          cursor: pointer;
+        }
+        
+        .package-desc {
+          color: #666;
+          font-size: 15px;
+          margin-bottom: 20px;
+        }
+        
+        .main-btn {
+          display: inline-block;
+          padding: 10px 24px;
+          background: #000000;
+          color: white;
+          text-decoration: none;
+          border-radius: 50px;
+          transition: background 0.3s ease;
+        }
+    
+        /* Modal Arka Planı */
+/* Tüm Modal Arka Planları */
+.modal {
+  display: none; /* Başlangıçta gizli */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Koyu arka plan */
+}
+
+/* Modal İçeriği */
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto; /* Ortalamak için üstten biraz boşluk */
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 450px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Kapatma Butonu */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+}
+
+/* Modal İçindeki Input ve Butonlar */
+.modal input[type="text"] {
+  padding: 10px;
+  margin: 10px 0;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.modal button {
+  padding: 10px 20px;
+  background-color: #7d5fff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal button:hover {
+  background-color: #6c4ed3;
+}
+
+/* Açılırken animasyon */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+
+        </style>
+
+    <script>
+      // TikTok Kartları için Slider İşlevi
+const sliderUser = document.getElementById('sliderUser');
+const priceUser = document.getElementById('priceUser');
+const userCount = document.getElementById('userCount');
+
+sliderUser.addEventListener('input', function() {
+  const userCountValue = parseInt(this.value);
+  const price = (userCountValue * 200).toFixed(2); // 200 TL fiyatı
+  userCount.innerHTML = `Minimum <strong>+${userCountValue}</strong> Kullanıcı`;
+  priceUser.textContent = `₺${parseFloat(price).toLocaleString('tr-TR')} `;
+});
+
+const sliderMicroInfluencer = document.getElementById('sliderMicroInfluencer');
+const priceMicroInfluencer = document.getElementById('priceMicroInfluencer');
+const microInfluencerCount = document.getElementById('microInfluencerCount');
+
+sliderMicroInfluencer.addEventListener('input', function() {
+  const microInfluencerCountValue = parseInt(this.value);
+  const price = (microInfluencerCountValue * 450).toFixed(2); // 450 TL fiyatı
+  microInfluencerCount.innerHTML = `Minimum <strong>+${microInfluencerCountValue}</strong> Mikro Fenomen`;
+  priceMicroInfluencer.textContent = `₺${parseFloat(price).toLocaleString('tr-TR')} `;
+});
+
+const sliderDiscoverEdit = document.getElementById('sliderDiscoverEdit');
+const priceDiscoverEdit = document.getElementById('priceDiscoverEdit');
+const discoverEditCount = document.getElementById('discoverEditCount');
+
+sliderDiscoverEdit.addEventListener('input', function() {
+  const discoverEditCountValue = parseInt(this.value);
+  const price = (discoverEditCountValue * 4000).toFixed(2); // 500 TL fiyatı
+  discoverEditCount.innerHTML = `Minimum <strong>+${discoverEditCountValue}</strong> Makro Fenomen`;
+  priceDiscoverEdit.textContent = `₺${parseFloat(price).toLocaleString('tr-TR')} `;
+});
+
+// Modal'ı gösterme fonksiyonu
+function showModalTikTok(cardType) {
+  const modal = document.getElementById('purchaseModalTikTok');
+  let price = '';
+  let count = '';
+
+  if (cardType === 'user') {
+    price = priceUser.textContent;
+    count = userCount.textContent;
+  } else if (cardType === 'microInfluencer') {
+    price = priceMicroInfluencer.textContent;
+    count = microInfluencerCount.textContent;
+  } else if (cardType === 'discoverEdit') {
+    price = priceDiscoverEdit.textContent;
+    count = discoverEditCount.textContent;
+  }
+
+  document.getElementById('finalPriceTikTok').textContent = price;
+  document.getElementById('finalCountTikTok').textContent = count;
+  modal.style.display = "block";
+}
+
+// Modal'ı kapatma fonksiyonu
+function closeModalTikTok() {
+  const modal = document.getElementById('purchaseModalTikTok');
+  modal.style.display = "none";
+}
+
+function submitLinkTikTok() {
+  const tikTokLink = document.getElementById('tikTokLink').value;
+  const finalPrice = document.getElementById('finalPriceTikTok').textContent.trim();
+  const followerCount = document.getElementById('sliderUser').value;
+
+  if (tikTokLink) {
+    const phoneNumber = "905517477767";
+    const message = `Merhaba, bir TikTok siparişi oluşturuldu.%0AFiyat: ${finalPrice}%0Aİstenilen Kişi Sayısı: ${followerCount}%0ATikTok Linki: ${tikTokLink}%0A%0ANOT: Bu işlem kullanıcı paketi için gerçekleştirilmiştir.`;
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+    window.open(whatsappURL, "_blank");
+  } else {
+    alert("Lütfen geçerli bir TikTok linki girin.");
+  }
+}
+
+
+// Modal dışına tıklandığında kapanmasını sağlamak için
+window.onclick = function(event) {
+  const modal = document.getElementById('purchaseModalTikTok');
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+    </script>
+
+<script>
+const sliderStarter = document.getElementById('sliderStarter');
+const priceStarter = document.getElementById('priceStarter');
+const listenerCount = document.getElementById('listenerCount');
+
+sliderStarter.addEventListener('input', function () {
+  const dinleyici = parseInt(this.value);
+  const fiyat = (dinleyici * 0.80).toFixed(2); // ondalıklı ₺
+
+  // Dinleyici sayısını "Minimum +2.000 Dinleyici" şeklinde yaz
+  listenerCount.innerHTML = `Minimum +<strong>${dinleyici.toLocaleString('tr-TR')}</strong> Dinleyici veya Dinlenme`;
+
+  // Fiyatı yaz
+  priceStarter.textContent = `₺${parseFloat(fiyat).toLocaleString('tr-TR')} `;
+});
+  </script>
+
+  <script>
+const sliderYouTube = document.getElementById('sliderYouTube');
+const priceYouTube = document.getElementById('priceYouTube');
+const viewCount = document.getElementById('viewCount');
+
+sliderYouTube.addEventListener('input', function () {
+  const izlenme = parseInt(this.value);
+  const fiyat = (izlenme * 0.08).toFixed(2); // 10.000 izlenme 800 TL => 0.08 TL başı
+
+  viewCount.innerHTML = `Minimum +<strong>${izlenme.toLocaleString('tr-TR')}</strong> İzlenme`;
+  priceYouTube.textContent = `₺${parseFloat(fiyat).toLocaleString('tr-TR')} `;
+});
+
+// Modal'ı gösterme fonksiyonu
+function showModal(event) {
+  event.preventDefault();  // Sayfanın yenilenmesini engeller
+
+  const modal = document.getElementById('purchaseModal');
+  const priceYouTube = document.getElementById('priceYouTube').textContent;
+  
+  // Fiyatı modalda güncelle
+  document.getElementById('finalPrice').textContent = priceYouTube;
+  
+  // Modal'ı göster
+  modal.style.display = "block";
+}
+
+// Modal'ı kapatma fonksiyonu
+function closeModal() {
+  const modal = document.getElementById('purchaseModal');
+  modal.style.display = "none"; // Modal'ı gizle
+}
+
+// YouTube linki gönderildiğinde yapılacak işlem
+function submitLink() {
+  const youtubeLink = document.getElementById('youtubeLink').value;
+  const finalPrice = document.getElementById('finalPrice').textContent;
+
+  if (youtubeLink) {
+    // Ödeme sayfasına yönlendirme yapılacak URL
+    const paymentUrl = `https://yourpaymentgateway.com/payment?price=${encodeURIComponent(finalPrice)}&link=${encodeURIComponent(youtubeLink)}`;
+
+    // Yönlendirme işlemi
+    window.location.href = paymentUrl;
+  } else {
+    alert("Lütfen geçerli bir YouTube linki girin.");
+  }
+}
+
+// Modal dışına tıklandığında kapanmasını sağlamak için
+window.onclick = function(event) {
+  const modal = document.getElementById('purchaseModal');
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+// Modal'ı gösterme fonksiyonu
+function showModal(event) {
+  event.preventDefault();  // Sayfanın yenilenmesini engeller
+
+  const modal = document.getElementById('purchaseModalSpotify');
+  const priceStarter = document.getElementById('priceStarter').textContent;
+  
+  // Fiyatı modalda güncelle
+  document.getElementById('finalPriceSpotify').textContent = priceStarter;
+  
+  // Modal'ı göster
+  modal.style.display = "block";
+}
+
+// Modal'ı kapatma fonksiyonu
+function closeModal() {
+  const modal = document.getElementById('purchaseModalSpotify');
+  modal.style.display = "none"; // Modal'ı gizle
+}
+
+// Spotify linki gönderildiğinde yapılacak işlem
+function submitLinkSpotify() {
+  const spotifyLink = document.getElementById('spotifyLink').value;
+  const finalPrice = document.getElementById('finalPriceSpotify').textContent;
+
+  if (spotifyLink) {
+    // Ödeme sayfasına yönlendirme yapılacak URL
+    const paymentUrl = `https://yourpaymentgateway.com/payment?price=${encodeURIComponent(finalPrice)}&link=${encodeURIComponent(spotifyLink)}`;
+
+    // Yönlendirme işlemi
+    window.location.href = paymentUrl;
+  } else {
+    alert("Lütfen geçerli bir Spotify linki girin.");
+  }
+}
+
+// Modal dışına tıklandığında kapanmasını sağlamak için
+window.onclick = function(event) {
+  const modal = document.getElementById('purchaseModalSpotify');
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+</script>
+
+
+
+    
+    <!--====== ABOUT 2 PART ENDS ======-->
+
+    <!--====== SERVICE 2 PART START ======-->
+    
+    
+    <!-- Fotoğraflı Artist Slider -->
+<section class="artists-slider-section">
+    <div class="container">
+        <h2 class="section-title">6. Yılımızı Kutluyoruz 850’den Fazla Sanatçı Ve Müzik Şirketleriyle İşbirliği</h2>
+
+        <!-- Üst Sıra - Sağa Kaydır -->
+        <div class="artists-slider sliding-right">
+            <div class="artist-item"><div class="artist-image"><img src="https://i.scdn.co/image/ab6761610000e5ebc804eb55aef746c1683a8a81" alt="Pois"></div><div class="artist-name">Pois</div></div>
+            <div class="artist-item"><div class="artist-image"><img src="https://cdn.bubilet.com.tr/files/Sanatci/wegh-32138.jpeg" alt="Wegh"></div><div class="artist-name">Wegh</div></div>
+            <div class="artist-item"><div class="artist-image"><img src="https://cdn.bubilet.com.tr/files/Sanatci/era7capone--53882.jpg" alt="Era7"></div><div class="artist-name">Era7capone</div></div>
+            <div class="artist-item"><div class="artist-image"><img src="https://images.genius.com/0808d8dd1a495794e6f79151302727d1.300x300x1.png" alt="Poizi"></div><div class="artist-name">Poizi</div></div>
+            <div class="artist-item"><div class="artist-image"><img src="https://www.faorganizasyon.com.tr/wp-content/uploads/2022/01/fa-organizasyon_tugba-yurt-menajeri.jpg" alt="Tuğba Yurt"></div><div class="artist-name">Tuğba Yurt</div></div>
+            <div class="artist-item"><div class="artist-image"><img src="https://i.scdn.co/image/ab6761610000e5eb50d9849f55cb64a1dea567ba" alt="THYPONYX"></div><div class="artist-name">THYPONYX</div></div>
+            <div class="artist-item"><div class="artist-image"><img src="https://i.scdn.co/image/ab67616d00001e024a160d8a26251229468bfd99" alt="Oğuz Gümüş"></div><div class="artist-name">Oğuz Gümüş</div></div>
+            <div class="artist-item"><div class="artist-image"><img src="https://cdn-images.dzcdn.net/images/cover/be00cb7d6b95950be12a3f4264853b66/0x1900-000000-80-0-0.jpg" alt="Erdal Toprak"></div><div class="artist-name">Erdal Toprak</div></div>
+            <div class="artist-item"><div class="artist-image"><img src="https://cdn-images.dzcdn.net/images/artist/13584634152150f2fff5be108117e4f7/500x500.jpg" alt="Ata Alabaş"></div><div class="artist-name">Ata Alabaş</div></div>
+            <div class="artist-item"><div class="artist-image"><img src="https://kimdir.tv/wp-content/uploads/2020/01/pinar-suer-kimdir.jpg" alt="Pınar Süer"></div><div class="artist-name">Pınar Süer</div></div>
+            <div class="artist-item"><div class="artist-image"><img src="https://i.scdn.co/image/ab6761610000e5eb03790af9b4e42472226c1e9e" alt="Ceren Sagu"></div><div class="artist-name">Ceren Sagu</div></div>
+            <div class="artist-item"><div class="artist-image"><img src="https://i.scdn.co/image/ab6761610000e5eb5caac7f517d77d039c1a828d" alt="Berkay"></div><div class="artist-name">Berkay</div></div>
+            <div class="artist-item"><div class="artist-image"><img src="https://b6s54eznn8xq.merlincdn.net/Uploads/People/2c00922f5ec94271902835d9d0ef407d.jpg" alt="Gökhan Türkmen"></div><div class="artist-name">Gökhan Türkmen</div></div>
+            <div class="artist-item"><div class="artist-image"><img src="https://i.hizliresim.com/apzxei9.jpeg" alt="Resim Yükle"></a>" alt="Boi"></div><div class="artist-name">Boi</div></div>
+            <div class="artist-item"><div class="artist-image"><img src="https://yt3.googleusercontent.com/nmOpMkprXT5JFrc6qEkd6QW3WdyYVEbXklxcTBYGLF9v5mCd_Rfw6obFEvGH34J3lnQ3r5PNsEA=s900-c-k-c0x00ffffff-no-rj" alt="Işıl Ayman"></div><div class="artist-name">Işıl Ayman</div></div>
+        </div>
+
+        <!-- Alt Sıra - Sola Kaydır -->
+        <div class="artists-slider sliding-left">
+            <div class="artist-item"><div class="artist-image"><img src="https://cdn.bubilet.com.tr/files/Etkinlik/yusuf-guney-astral-83491.JPG" alt="Yusuf Güney"></div><div class="artist-name">Yusuf Güney</div></div>
+            <div class="artist-item"><div class="artist-image"><img src="https://yt3.googleusercontent.com/V-jF-EugpA2Y-VwB06SGj2mUaDKh7GXWFFgFk1tj5LUHzS9zD9o6yqPqSwfOOY7BNEYVdIZTwuw=s900-c-k-c0x00ffffff-no-rj" alt="Uğur Özçelik"></div><div class="artist-name">Uğur Özçelik</div></div>
+            <div class="artist-item"><div class="artist-image"><img src="https://cdn-images.dzcdn.net/images/artist/a794ed33fbe0b53eda9bc77eb9da09f6/1900x1900-000000-80-0-0.jpg" alt="Murat Övüç"></div><div class="artist-name">Murat Övüç</div></div>
+            <div class="artist-item"><div class="artist-image"><img src="https://yt3.googleusercontent.com/2omVDwRWPzJb5nQpNnHj6vGQc57EbLFRGCB9kwU02it2Fb4L1GNjrEEicLWhP7X3F9QiGPea-g=s900-c-k-c0x00ffffff-no-rj" alt="Melis Kar"></div><div class="artist-name">Melis Kar</div></div>
+            <div class="artist-item"><div class="artist-image"><img src="https://images.genius.com/613ff21c47636489b8b4ce83c4f36f29.900x900x1.jpg" alt="ERO"></div><div class="artist-name">ERO</div></div>
+            <div class="artist-item"><div class="artist-image"><img src="https://www.yurt-haber.com/images/haber/mete-karagozden-iddiali-cikis-yeni-sarkim-dogum-gunu-hediyesi-gibi-oldu-092019-20250418.jpg" alt="Mete Karagöz"></div><div class="artist-name">Mete Karagöz</div></div>
+            <div class="artist-item"><div class="artist-image"><img src="https://cdn-images.dzcdn.net/images/artist/d7f82fa366b4e002cc2c40452f6982fc/1900x1900-000000-80-0-0.jpg" alt="Aziz Kiraz"></div><div class="artist-name">Aziz Kiraz</div></div>
+            <div class="artist-item"><div class="artist-image"><img src="https://i.scdn.co/image/ab6761610000e5eb3fa64336a2418e3063445e45" alt="Sezer Sarıgöz"></div><div class="artist-name">Sezer Sarıgöz</div></div>
+            <div class="artist-item"><div class="artist-image"><img src="https://cdn-images.dzcdn.net/images/cover/dbf9fd3f4079da27bab0482b82684243/1900x1900-000000-80-0-0.jpg" alt="Ozan Kapılan"></div><div class="artist-name">Ozan Kapılan</div></div>
+            <div class="artist-item"><div class="artist-image"><img src="https://images.bursadabugun.com/editor/haber/14012025/emirhancakal-678622870ae3e.png" alt="Çakal"></div><div class="artist-name">Çakal</div></div>
+            <div class="artist-item"><div class="artist-image"><img src="https://i.scdn.co/image/ab67616100005174f856502d75dc2ef42405e369" alt="Tunç232"></div><div class="artist-name">Tunç232</div></div>
+            <div class="artist-item"><div class="artist-image"><img src="https://gazeterizecom.teimg.com/crop/1280x720/gazeterize-com/uploads/2024/07/agency/igf/alptugrul-karadeli-yeni-sarkilari-ile-yogun-ilgi-goruyor.webp" alt="Alptuğrul Karadeli"></div><div class="artist-name">Alptuğrul Karadeli</div></div>
+            <div class="artist-item"><div class="artist-image"><img src="https://i.scdn.co/image/ab6761610000e5ebd9349c35e2b54cb2d698b571" alt="Batuhan Aslan"></div><div class="artist-name">Batuhan Aslan</div></div>
+            <div class="artist-item"><div class="artist-image"><img src="https://i.scdn.co/image/ab676161000051744d83933e83d863b1ebae0945" alt="Kuzey"></div><div class="artist-name">Kuzey</div></div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Rethink Sans font import */
+    @import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;600;700&display=swap');
+    
+    .artists-slider-section {
+        padding: 50px 0;
+        background: #f8f9fa;
+        overflow: hidden;
+        font-family: 'Rethink Sans', sans-serif;
+    }
+    
+    .section-title {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 28px;
+        color: #222;
+        font-weight: 700;
+    }
+    
+    .artists-slider {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 25px;
+        padding: 15px 0;
+        width: max-content;
+    }
+    
+    .sliding-right {
+        animation: slideRight 35s linear infinite;
+    }
+    
+    .sliding-left {
+        animation: slideLeft 35s linear infinite;
+    }
+    
+    .artist-item {
+        flex: 0 0 auto;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        transition: all 0.25s ease;
+        padding: 12px;
+        width: 140px;
+        text-align: center;
+    }
+    
+    .artist-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    }
+    
+    .artist-image {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 auto 10px;
+        border: 2px solid #f0f0f0;
+    }
+    
+    .artist-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .artist-name {
+        font-size: 14px;
+        font-weight: 600;
+        color: #333;
+        margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    @keyframes slideRight {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    
+    @keyframes slideLeft {
+        0% { transform: translateX(-50%); }
+        100% { transform: translateX(0); }
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+        .artist-item {
+            width: 120px;
+            padding: 10px;
+        }
+        
+        .artist-image {
+            width: 70px;
+            height: 70px;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Sonsuz döngü için artistleri kopyala
+        const sliders = document.querySelectorAll('.artists-slider');
+        sliders.forEach(slider => {
+            slider.innerHTML = slider.innerHTML + slider.innerHTML;
+        });
+    });
+</script>
+
+    
+    
+    <footer class="footer-area footer-2-area">
+        
+        
+            <div class="row">
+                <div class="col-lg-12">
+                    
+                    <div class="footer-copyright footer-copyright-11 d-flex align-items-end">
+                        <p>Copyright @ 2025. Design by Alesta made for XTurkiye</p>
+                    </div>
+                </div>
+            </div>
+    </footer>
+    
+    <!--====== FOOTER PART ENDS ======-->
+
+    <!--====== BACK TO TOP START ======-->
+
+    <a class="back-to-top back-to-top-11">
+        <i class="fal fa-angle-up"></i>
+    </a>
+
+    <!--====== BACK TO TOP ENDS ======-->
+
+
+
+
+
+
+    
+    
+    
+    <!--====== jquery js ======-->
+    <script src="tiktok/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="tiktok/js/vendor/jquery-1.12.4.min.js"></script>
+
+    <!--====== Bootstrap js ======-->
+    <script src="tiktok/js/bootstrap.min.js"></script>
+    <script src="tiktok/js/popper.min.js"></script>
+    
+    <!--====== appear js ======-->
+    <script src="tiktok/js/jquery.appear.min.js"></script>
+    
+    <!--====== Slick js ======-->
+    <script src="tiktok/js/slick.min.js"></script>
+    
+    <!--====== wow js ======-->
+    <script src="tiktok/js/wow.js"></script>
+    
+    <!--====== Isotope js ======-->
+    <script src="tiktok/js/isotope.pkgd.min.js"></script>
+    
+    <!--====== Images Loaded js ======-->
+    <script src="tiktok/js/imagesloaded.pkgd.min.js"></script>
+    
+    <!--====== Magnific Popup js ======-->
+    <script src="tiktok/js/jquery.magnific-popup.min.js"></script>
+    
+    <!--====== Main js ======-->
+    <script src="tiktok/js/main.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</body>
+
+</html>
