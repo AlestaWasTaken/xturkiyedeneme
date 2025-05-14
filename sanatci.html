@@ -1,631 +1,110 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
 
 <head>
-    <!--====== Required meta tags ======-->
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="XTurkiye - Sanatçılar için dijital reklam ve tanıtım hizmetleri">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!--====== Title ======-->
-    <title>XTurkiye - Sanatçı Hizmetleri</title>
-    
-    <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="index/images/favicon.ico" type="image/png">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>XTurkiye Hizmetler</title>
 
-    <!--====== Bootstrap css ======-->
-    <link rel="stylesheet" href="index/css/bootstrap.min.css">
-    
-    <!--====== Fontawesome css ======-->
-    <link rel="stylesheet" href="index/css/font-awesome.min.css">
-    
-    <!--====== Magnific Popup css ======-->
-    <link rel="stylesheet" href="index/css/magnific-popup.css">
-    
-    <!--====== animate css ======-->
-    <link rel="stylesheet" href="index/css/animate.min.css">
-    
-    <!--====== Slick css ======-->
-    <link rel="stylesheet" href="index/css/slick.css">
-    
-    <!--====== Default css ======-->
-    <link rel="stylesheet" href="index/css/default.css">
-    
-    <!--====== Style css ======-->
-    <link rel="stylesheet" href="index/css/style.css">
-
-    <!-- Custom CSS -->
-    <style>
-
-        * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-@font-face {
-    font-family: 'Rethink Sans';
-    src: url('font/RethinkSans-Bold.ttf');
-    font-weight: bold;
-    font-style: normal;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Rethink Sans';
-    font-weight: bold; /* @font-face'te tanımlı bold ağırlığı */
-}
-
-        body {
-            background-color: #f8f9fa;
-            color: #333;
-            overflow-x: hidden; /* Yatay scroll'u engeller */
-    width: 100%;
-        }
-        
-        .services-page-container {
-            max-width: 1000px;
-            margin: 100px auto 50px;
-            padding: 0 20px;
-        }
-        
-        .page-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        
-        .page-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #000;
-            margin-bottom: 20px;
-        }
-        
-        .page-subtitle {
-            font-size: 1.2rem;
-            color: #666;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        .services-container {
-            background: white;
-            border-radius: 16px;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
-        
-        .service-category {
-            margin-bottom: 40px;
-        }
-        
-        .category-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #000;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .service-buttons {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 15px;
-        }
-        
-        .service-btn {
-            display: block;
-            padding: 18px 25px;
-            border-radius: 12px;
-            text-decoration: none;
-            color: white;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            font-size: 16px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        
-        .service-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
-        }
-        
-        .service-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0));
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        
-        .service-btn:hover::before {
-            opacity: 1;
-        }
-        
-        /* Button Colors */
-        .spotify-btn {
-            background: linear-gradient(135deg, #11182a 0%, #11182a 100%);
-        }
-        
-        .tiktok-btn {
-            background: linear-gradient(135deg, #11182a 0%, #11182a 100%);
-        }
-        
-        .youtube-btn {
-            background: linear-gradient(135deg, #11182a 0%, #11182a 100%);
-        }
-        
-        .radio-btn {
-            background: linear-gradient(135deg, #11182a 0%, #11182a 100%);
-        }
-        
-        .instagram-btn {
-            background: linear-gradient(45deg, #11182a, #11182a, #11182a, #11182a, #11182a, #11182a);
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .services-page-container {
-                margin: 80px auto 30px;
-            }
-            
-            .page-title {
-                font-size: 2rem;
-                        position: relative;
-        top: 1rem;
-            }
-            
-            .services-container {
-                padding: 25px;
-            }
-            
-            .service-btn {
-                padding: 15px 20px;
-                font-size: 14px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/plugins/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/plugins/font-awesome.min.css">
+    <link rel="stylesheet" href="css/plugins/swiper.min.css">
+    <link rel="stylesheet" href="css/plugins/fancybox.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+   <style>
+    
 
-    <!-- LOADER -->
-    <div class="preloader">
-        <div class="lds-ellipsis">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-    <!-- END LOADER -->
-   
-    <!-- HEADER -->
-    <div class="x-header">
-    <div class="x-header-container">
-        <div class="x-header-row">
-            <div class="x-header-col">
-                <div class="x-nav-wrapper">
-                    <nav class="x-navbar">
-                        <!-- Logo - Light Version -->
-                        <a class="x-brand" href="index.html">
-                            <img src="index/images/xturkiye.png" alt="XTurkiye Logo" class="x-logo">
-                        </a>
+</style>
 
-                        <!-- Mobile Toggle -->
-                        <button class="x-menu-toggle" type="button" data-toggle="collapse" data-target="#xMainMenu" aria-label="Menu" style="position: relative; right: 1rem">
-                            <span class="x-toggle-bar"></span>
-                            <span class="x-toggle-bar"></span>
-                            <span class="x-toggle-bar"></span>
-                        </button>
+   <div class="mil-wrapper" id="top">
+    <div class="mil-content">
+        <div id="swupMain" class="mil-main-transition">
 
-                        <!-- Menu -->
-                        <div class="x-menu-collapse" id="xMainMenu">
-                            <ul class="x-nav-menu">
-                                <li class="x-nav-item">
-                                    <a class="x-nav-link" href="index.html">Anasayfa</a>
-                                </li>
-                                <li class="x-nav-item">
-                                    <a class="x-nav-link" href="#">Hakkımızda</a>
-                                </li>
-                                <li class="x-nav-item">
-                                    <a class="x-nav-link" href="#">Hizmetler</a>
-                                </li>
-                                <li class="x-nav-item">
-                                    <a class="x-nav-link" href="#">Referanslar</a>
-                                </li>
-                            </ul>
-                            
-                            <!-- Contact Button -->
-                            <div class="x-contact-btn">
-                                <a class="x-btn x-btn-primary" href="#">
-                                    <i class="fas fa-paper-plane"></i> İletişime Geç
-                                </a>
-                            </div>
+            <section class="mil-dark-bg">
+                <div class="mi-invert-fix">
+                    <div class="container mil-p-120-60">
+                        <div class="mil-mb-60">
+                            <h2 class="mil-h1 mil-muted mil-center">Sanatçılar İçin <span class="mil-thin">Tanıtım Hizmetleri</span></h2>
+                            <p class="mil-light-soft mil-center">Müziğinizi daha geniş kitlelere ulaştırmak için tasarlanmış çözümler</p>
                         </div>
-                    </nav>
+
+                        <!-- Spotify Services -->
+                        <div class="mil-service-card-sm mil-up">
+                            <div class="mil-service-title">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="#1DB954" class="mil-service-icon">
+                                    <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+                                </svg>
+                                <h5 class="mil-muted">Spotify Reklam/Tanıtım</h5>
+                            </div>
+                            <button class="mil-button mil-sm mil-mb-30">Dinleyici Playlist Reklam/Tanıtımları</button>
+                        </div>
+
+                        <!-- TikTok Services -->
+                        <div class="mil-service-card-sm mil-up">
+                            <div class="mil-service-title">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="#000000" id="tiktok" class="mil-service-icon">
+                                    <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                                </svg>
+                                <h5 class="mil-muted">TikTok Reklam/Tanıtım</h5>
+                            </div>
+                            <button class="mil-button mil-sm mil-mb-10">Mikro Fenomen Video Akım Tanıtımları</button>
+                            <button class="mil-button mil-sm mil-mb-10">Makro Fenomen Video Akım Tanıtımları</button>
+                            <button class="mil-button mil-sm mil-mb-30">Kullanıcı Video Akım Tanıtımları</button>
+                        </div>
+
+                        <!-- Instagram Services -->
+                        <div class="mil-service-card-sm mil-up">
+                            <div class="mil-service-title">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="#E1306C" class="mil-service-icon">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                                <h5 class="mil-muted">Instagram Reklam/Tanıtım</h5>
+                            </div>
+                            <button class="mil-button mil-sm mil-mb-30">Reels + Story Tanıtımları</button>
+                        </div>
+
+                        <!-- YouTube Services -->
+                        <div class="mil-service-card-sm mil-up">
+                            <div class="mil-service-title">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="#FF0000" class="mil-service-icon">
+                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                </svg>
+                                <h5 class="mil-muted">YouTube Reklam/Tanıtım</h5>
+                            </div>
+                            <button class="mil-button mil-sm mil-mb-30">Trend Etkili Türkiye Organik İzlenme Tanıtımları</button>
+                        </div>
+
+                        <!-- Radio Services -->
+                        <div class="mil-service-card-sm mil-up">
+                            <div class="mil-service-title">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="#FF5722" class="mil-service-icon">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.31-8.86c-1.77-.45-2.34-.94-2.34-1.67 0-.84.79-1.43 2.1-1.43 1.38 0 1.9.66 1.94 1.64h1.71c-.05-1.34-.87-2.57-2.49-2.97V5H10.9v1.69c-1.51.32-2.72 1.3-2.72 2.81 0 1.79 1.49 2.69 3.66 3.21 1.95.46 2.34 1.15 2.34 1.87 0 .53-.39 1.39-2.1 1.39-1.6 0-2.23-.72-2.32-1.64H8.04c.1 1.7 1.36 2.66 2.86 2.97V19h2.34v-1.67c1.52-.29 2.72-1.16 2.73-2.77-.01-2.2-1.9-2.96-3.66-3.42z"/>
+                                </svg>
+                                <h5 class="mil-muted">Radyo Reklam/Tanıtım</h5>
+                            </div>
+                            <button class="mil-button mil-sm mil-mb-30">Ulusal/Bölgesel Radyo Şarkı Servisi</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
+
         </div>
     </div>
 </div>
 
-<style>
-    .x-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    padding: 20px 0;
-    transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
-    backdrop-filter: blur(10px);
-    background: rgb(0, 0, 0);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.x-header.scrolled {
-    background: rgb(0, 0, 0);
-    padding: 10px 0;
-    backdrop-filter: blur(15px);
-}
-
-.x-navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.x-logo {
-    height: 40px;
-    transition: all 0.3s ease;
-}
-
-.x-menu-toggle {
-    background: transparent;
-    border: none;
-    padding: 10px;
-    display: none;
-}
-
-.x-toggle-bar {
-    display: block;
-    width: 25px;
-    height: 2px;
-    background: white;
-    margin: 5px 0;
-    transition: all 0.3s ease;
-}
-
-.x-menu-collapse {
-    display: flex;
-    align-items: center;
-}
-
-.x-nav-menu {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.x-nav-item {
-    margin: 0 15px;
-    position: relative;
-}
-
-.x-nav-link {
-    color: white;
-    font-weight: 500;
-    text-decoration: none;
-    padding: 8px 0;
-    position: relative;
-    font-size: 16px;
-    transition: all 0.3s ease;
-}
-
-.x-nav-link:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #1DB954;
-    transition: width 0.3s ease;
-}
-
-.x-nav-link:hover:after {
-    width: 100%;
-}
-
-.x-contact-btn {
-    margin-left: 30px;
-}
-
-.x-btn {
-    display: inline-flex;
-    align-items: center;
-    padding: 10px 25px;
-    border-radius: 30px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    text-decoration: none;
-}
-
-.x-btn-primary {
-    background: white;
-    color: #1DB954;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.x-btn-primary:hover {
-    background: #f1f1f1;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-.x-btn i {
-    margin-right: 8px;
-}
-
-/* Mobile Styles */
-@media (max-width: 992px) {
-    .x-menu-toggle {
-        display: block;
-    }
-    
-    .x-menu-collapse {
-        position: fixed;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.9);
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
-        clip-path: circle(0% at 100% 0);
-        transition: all 0.6s cubic-bezier(0.65, 0, 0.35, 1);
-    }
-    
-    .x-menu-collapse.show {
-        clip-path: circle(150% at 100% 0);
-    }
-    
-    .x-nav-menu {
-        flex-direction: column;
-        width: 100%;
-    }
-    
-    .x-nav-item {
-        margin: 10px 0;
-        width: 100%;
-    }
-    
-    .x-contact-btn {
-        margin: 20px 0 0 0;
-        width: 100%;
-    }
-    
-    .x-btn {
-        width: 100%;
-        justify-content: center;
-    }
-}
-</style>
-
-    <!-- MAIN CONTENT -->
-    <div class="services-page-container">
-        <div class="page-header">
-            <h1 class="page-title">Sanatçılar İçin Reklam/Tanıtım Hizmetleri</h1>
-            <p class="page-subtitle">Müziğinizi daha geniş kitlelere ulaştırmak için özel olarak tasarlanmış reklam ve tanıtım çözümlerimiz</p>
-        </div>
-        
-        <div class="services-container">
-            <!-- Spotify Services -->
-            <div class="service-category">
-                <h3 class="category-title">
-                    <svg viewBox="0 0 24 24" width="24" height="24" fill="#1DB954">
-                        <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
-                    </svg>
-                    Spotify Reklam/Tanıtım
-                </h3>
-                <div class="service-buttons">
-                    <a href="spotify.html" class="service-btn spotify-btn">
-                        <span>Organik Dinlenme / Dinleyici Playlist Reklam/Tanıtımları</span>
-                    </a>
-                </div>
-            </div>
-            
-            <!-- TikTok Services -->
-            <div class="service-category">
-                <h3 class="category-title">
-                    <svg viewBox="0 0 24 24" width="24" height="24" fill="#000000">
-                        <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
-                    </svg>
-                    TikTok Reklam/Tanıtım
-                </h3>
-                <div class="service-buttons">
-                    <a href="mikro.html" class="service-btn tiktok-btn">
-                        <span>Mikro Fenomen Video Akım Reklam/Tanıtımları</span>
-                    </a>
-                    <a href="makro.html" class="service-btn tiktok-btn">
-                        <span>Makro Fenomen Video Akım Reklam/Tanıtımları</span>
-                    </a>
-                    <a href="kullanici.html" class="service-btn tiktok-btn">
-                        <span>Kullanıcı Video Akım Reklam/Tanıtımları</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Instagram Services -->
-            <div class="service-category">
-                <h3 class="category-title">
-                    <svg viewBox="0 0 24 24" width="24" height="24" fill="#E1306C">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                    </svg>
-                    Instagram Reklam/Tanıtım
-                </h3>
-                <div class="service-buttons">
-                    <a href="#" class="service-btn instagram-btn">
-                        <span>Kullanıcı Video Reels + Story Reklam/Tanıtım / Tanıtımları</span>
-                    </a>
-                </div>
-            </div>
-            
-            <!-- YouTube & Radio Services -->
-            <div class="service-category">
-                <h3 class="category-title">
-                    <svg viewBox="0 0 24 24" width="24" height="24" fill="#FF0000">
-                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                    </svg>
-                    YouTube Reklam/Tanıtım
-                </h3>
-                <div class="service-buttons">
-                    <a href="#" class="service-btn youtube-btn">
-                        <span>Trend Etkili Türkiye Organik İzlenme Reklam/Tanıtımları</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="service-category">
-                <h3 class="category-title">
-                    <svg viewBox="0 0 24 24" width="24" height="24" fill="#FF5722">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.31-8.86c-1.77-.45-2.34-.94-2.34-1.67 0-.84.79-1.43 2.1-1.43 1.38 0 1.9.66 1.94 1.64h1.71c-.05-1.34-.87-2.57-2.49-2.97V5H10.9v1.69c-1.51.32-2.72 1.3-2.72 2.81 0 1.79 1.49 2.69 3.66 3.21 1.95.46 2.34 1.15 2.34 1.87 0 .53-.39 1.39-2.1 1.39-1.6 0-2.23-.72-2.32-1.64H8.04c.1 1.7 1.36 2.66 2.86 2.97V19h2.34v-1.67c1.52-.29 2.72-1.16 2.73-2.77-.01-2.2-1.9-2.96-3.66-3.42z"/>
-                    </svg>
-                    Radyo Reklam/Tanıtım
-                </h3>
-                <div class="service-buttons">
-                    <a href="#" class="service-btn radio-btn">
-                        <span>Ulusal/Bölgesel/Yerel Radyo İstasyonlarına Şarkı Servisi</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- WhatsApp Button -->
-    <div class="whatsapp-button">
-        <a href="https://wa.me/905517477767?text=xturkiye.com%20sitenizden%20ulaşıyorum" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335 .157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-            </svg>
-        </a>
-    </div>
-
-    <style>
-        /* WhatsApp Button Styles */
-        .whatsapp-button {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 9998;
-            animation: pulse 2s infinite;
-        }
-
-        .whatsapp-button a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 60px;
-            height: 60px;
-            background-color: #25D366;
-            border-radius: 50%;
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .whatsapp-button a:hover {
-            background-color: #128C7E;
-            transform: scale(1.1);
-        }
-
-        .whatsapp-button svg {
-            width: 30px;
-            height: 30px;
-            fill: white;
-        }
-
-        /* Pulse Animation */
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-            }
-            70% {
-                box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-            }
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .whatsapp-button {
-                bottom: 20px;
-                right: 20px;
-            }
-            
-            .whatsapp-button a {
-                width: 50px;
-                height: 50px;
-            }
-            
-            .whatsapp-button svg {
-                width: 25px;
-                height: 25px;
-            }
-        }
-    </style>
-
-    <footer class="footer-area footer-2-area">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="footer-copyright footer-copyright-11 d-flex align-items-end">
-                    <p>Copyright @ 2025. Design by Alesta made for XTurkiye</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-    
-    <!--====== jquery js ======-->
-    <script src="index/js/vendor/modernizr-3.6.0.min.js"></script>
-    <script src="index/js/vendor/jquery-1.12.4.min.js"></script>
-
-    <!--====== Bootstrap js ======-->
-    <script src="index/js/bootstrap.min.js"></script>
-    <script src="index/js/popper.min.js"></script>
-    
-    <!--====== appear js ======-->
-    <script src="index/js/jquery.appear.min.js"></script>
-    
-    <!--====== Slick js ======-->
-    <script src="index/js/slick.min.js"></script>
-    
-    <!--====== wow js ======-->
-    <script src="index/js/wow.js"></script>
-    
-    <!--====== Isotope js ======-->
-    <script src="index/js/isotope.pkgd.min.js"></script>
-    
-    <!--====== Images Loaded js ======-->
-    <script src="index/js/imagesloaded.pkgd.min.js"></script>
-    
-    <!--====== Magnific Popup js ======-->
-    <script src="index/js/jquery.magnific-popup.min.js"></script>
-    
-    <!--====== Main js ======-->
-    <script src="index/js/main.js"></script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="js/plugins/jquery.min.js"></script>
+    <script src="js/plugins/swup.min.js"></script>
+    <script src="js/plugins/swiper.min.js"></script>
+    <script src="js/plugins/fancybox.min.js"></script>
+    <script src="js/plugins/gsap.min.js"></script>
+    <script src="js/plugins/smooth-scroll.js"></script>
+    <script src="js/plugins/ScrollTrigger.min.js"></script>
+    <script src="js/plugins/ScrollTo.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
