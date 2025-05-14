@@ -9,6 +9,8 @@
 
     <!-- bootstrap grid css -->
     <link rel="stylesheet" href="css/plugins/bootstrap-grid.css">
+    <!-- head bölümüne ekleyin -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- font awesome css -->
     <link rel="stylesheet" href="css/plugins/font-awesome.min.css">
     <!-- swiper css -->
@@ -18,12 +20,85 @@
     <!-- ashley scss -->
     <link rel="stylesheet" href="css/style.css">
     <!-- page name -->
-    <title>Ashley</title>
+    <title>XTürkiye</title>
+
+    
 
 </head>
 
+<script>
+    
+</script>
+
+<style>
+
+    /* WhatsApp Butonu Stilleri */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 3rem;
+    z-index: 9999;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-btn a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-btn a:hover {
+    background-color: #128C7E;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobil cihazlar için boyut küçültme */
+@media (max-width: 768px) {
+    .whatsapp-btn {
+        bottom: 20px;
+        right: 20px;
+    }
+    .whatsapp-btn a {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+    }
+}
+
+/* Animasyon */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+</style>
+
 <body>
 
+
+
+<div class="whatsapp-btn">
+    <a href="https://wa.me/905551234567" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
     <!-- wrapper -->
     <div class="mil-wrapper" id="top">
 
@@ -76,6 +151,7 @@
     <span></span>
   </div>
 </div>
+
             <!-- frame clone end -->
             <div class="container">
                 <div class="mil-menu-content">
@@ -144,7 +220,7 @@
 
         <!-- content -->
         <div class="mil-content">
-            <div id="swupMain" class="mil-main-transition">
+            <div id="swupMain">
 
                 <!-- banner -->
                 <section class="mil-banner mil-dark-bg">
@@ -160,7 +236,7 @@
                         <div class="container">
                             <div class="mil-banner-content mil-up">
 
-                                 <h1 class="mil-muted mil-mb-60">XTürkiye<span class="mil-thin"> İle Tüm </span><br> Reklam / Tanıtım <span class="mil-thin">İhtiyaçlarınız</span></h1>
+                                 <h1 class="mil-muted mil-mb-60">X Türkiye <span class="mil-thin"> İle</span><br> Tanıtım / Reklam <span class="mil-thin">İhtiyaçlarınızı</span> Çözümleyin</h1>
                                 <div class="row">
                                     <div class="col-md-7 col-lg-5">
 
@@ -170,7 +246,7 @@
                                 </div>
 
                                 <div class="mil-button-group">
-    <a href="sanatci.html" class="mil-button mil-arrow-place mil-btn-space">
+    <a class="mil-button mil-arrow-place mil-btn-space" onclick="window.location.href='sanatci.html';">
         <span>Sanatçıyım</span>
     </a>
     <a href="users.html" class="mil-button mil-arrow-place mil-btn-space">
@@ -264,7 +340,7 @@
                             <div class="row mil-services-grid m-0">
                                 <div class="col-md-6 col-lg-3 mil-services-grid-item p-0">
 
-                                    <a href="sanatci.html" class="mil-service-card-sm mil-up">
+                                    <a class="mil-service-card-sm mil-up" onclick="window.location.href='sanatci.html';">
                                         <h5 class="mil-muted mil-mb-30">Müziğini Öne Taşımak İsteyen <br>Sanatçı Ve Şarkıcılar İçin Hazırlandı </h5>
                                         <p class="mil-light-soft mil-mb-30">Spotify , Youtube , TikTok , İnstagram , Radyo gibi alanlarda müziğinizi şimdi milyonlarca dinleyiciye ulaştırın! paketlere şimdi ulaşın! </p>
                                         <div class="mil-button mil-icon-button-sm mil-arrow-place">Paketler</div>

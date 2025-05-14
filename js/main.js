@@ -21,8 +21,7 @@ $(function () {
     const options = {
         containers: ['#swupMain', '#swupMenu'],
         animateHistoryBrowsing: true,
-        linkSelector: 'a:not([data-no-swup])',
-        animationSelector: '[class="mil-main-transition"]'
+        linkSelector: 'a:not([data-no-swup])'
     };
     const swup = new Swup(options);
 
@@ -1108,3 +1107,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.querySelectorAll('.mil-artists-slider').forEach(handleTouch);
 });
+

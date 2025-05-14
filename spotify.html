@@ -43,23 +43,23 @@
 
     <!-- Ana İçerik -->
     <div class="mil-content">
-        <div class="pricing-card">
-            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a9/TikTok_logo.svg/640px-TikTok_logo.svg.png"
+        <div class="pricing-card" >
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg" style="filter: invert(0);"
                  alt="TikTok Logo" class="spotify-logo">
-            <p class="listener-count" id="microInfluencerCount">Minimum <strong>+1</strong> Makro Fenomen</p>
+            <p class="listener-count" id="microInfluencerCount">Minimum <strong>+2.000</strong> Dinleyici veya Dinlenme</p>
 
-            <div class="price" id="priceMicroInfluencer">₺4.000</div>
+            <div class="price" id="priceMicroInfluencer">₺1.200</div>
 
             <div class="slider-container">
                 <span class="slider-arrow">»</span>
                 <span class="slider-text">Kaydır</span>
-                <input type="range" id="sliderMicroInfluencer" min="1" max="100" value="1" step="1">
+                <input type="range" id="sliderMicroInfluencer" min="2000" max="200000" value="2000" step="1">
             </div>
 
             <div class="yazilar">
                 <p><strong>%100 Organik ve Gerçek Türk TikTok Kullanıcılarıyla Tanıtım Hizmeti!</strong></p>
                 <p>• Şarkınıza özel, yaratıcı ve kaliteli içerikler paylaşılır.</p>
-                <p>• Paylaşım yapan kullanıcılar: <strong>100.000 - 800.000 takipçiye sahip, aktif ve etkili profiller</strong></p>
+                <p>• Paylaşım yapan kullanıcılar: <strong>10.000 - 80.000 takipçiye sahip, aktif ve etkili profiller</strong></p>
                 <p>• Şarkınızın keşfete düşmesi ve daha geniş kitlelere ulaşması hedeflenir.</p>
                 <p>• <strong>%100 kaliteli ve özgün içerik garantisi.</strong></p>
                 <p>• Şarkınızın tarzına uygun hedefleme yapılır.</p>
@@ -144,59 +144,6 @@ window.addEventListener('load', () => {
 
 
         <!-- TikTok Referans Slider -->
-        <section class="tiktok-ref-section">
-            <h2>Makro Fenomenlerle Yaratılan Etki</h2>
-            <p>Bu çalışmada videolarınız aşağıda örneklediğimiz şekilde çekilecektir.</p>
-            
-            <div class="tiktok-slider-container">
-                <div class="tiktok-slider">
-                    <!-- Video 1 -->
-                    <div class="tiktok-card">
-                        <div class="tiktok-thumbnail">
-                            <img src="https://p16-sign-sg.tiktokcdn.com/obj/tos-alisg-p-0037/ocWb4ADJIFAqQRCeoDEooeIVDhnbfj50PisvAT?lk3s=b59d6b55&x-expires=1747346400&x-signature=OOrZOlklWMoE2lDwr82BdyQqTso%3D&shp=b59d6b55&shcp=-" alt="Örnek Çalışma 1">
-                            <div class="tiktok-logo"><i class="fab fa-tiktok"></i></div>
-                        </div>
-                        <div class="tiktok-stats">
-                            <span>❤️ 12.4K</span>
-                            <span>💬 842</span>
-                            <span>↗️ 1.2K</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Video 2 -->
-                    <div class="tiktok-card">
-                        <div class="tiktok-thumbnail">
-                            <img src="https://p16-sign-sg.tiktokcdn.com/obj/tos-alisg-p-0037/o8bIZivrZCtYO8VEkMclANEAABAy75OcCJAiB?lk3s=b59d6b55&x-expires=1747346400&x-signature=Vw848oN7H62qW%2BSepAEV%2FngGRc4%3D&shp=b59d6b55&shcp=-" alt="Örnek Çalışma 2">
-                            <div class="tiktok-logo"><i class="fab fa-tiktok"></i></div>
-                        </div>
-                        <div class="tiktok-stats">
-                            <span>❤️ 8.7K</span>
-                            <span>💬 521</span>
-                            <span>↗️ 943</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Video 3 -->
-                    <div class="tiktok-card">
-                        <div class="tiktok-thumbnail">
-                            <img src="https://p16-sign-sg.tiktokcdn.com/obj/tos-alisg-p-0037/osAOQEfIGdLMSJSVAIeMA9AAfLm7AgGRRfcG8O?lk3s=b59d6b55&x-expires=1747346400&x-signature=eRr0ASeIV9Q9hayCwDDT77RFcFA%3D&shp=b59d6b55&shcp=-" alt="Örnek Çalışma 3">
-                            <div class="tiktok-logo"><i class="fab fa-tiktok"></i></div>
-                        </div>
-                        <div class="tiktok-stats">
-                            <span>❤️ 16.7K</span>
-                            <span>💬 791</span>
-                            <span>↗️ 1023</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="slider-controls">
-                    <button class="slider-prev" aria-label="Önceki video"><i class="fas fa-chevron-left"></i></button>
-                    <div class="slider-dots"></div>
-                    <button class="slider-next" aria-label="Sonraki video"><i class="fas fa-chevron-right"></i></button>
-                </div>
-            </div>
-        </section>
     </div>
 
     <!-- Modal -->
@@ -209,91 +156,107 @@ window.addEventListener('load', () => {
             
             <input type="text" id="tiktokName" placeholder="Adınız">
             
-            <label for="tikTokLink">TikTok Linkinizi Girin:</label>
-            <input type="text" id="tikTokLink" placeholder="TikTok linkinizi buraya yazın">
+            <label for="tikTokLink">Spotify Linkinizi Girin:</label>
+            <input type="text" id="tikTokLink" placeholder="Spotify linkinizi buraya yazın">
             
             <button onclick="submitLinkTikTok()">Gönder</button>
         </div>
     </div>
 
     <script>
-        // TikTok Kartları için Slider İşlevi
-        document.addEventListener("DOMContentLoaded", function() {
-            const slider = document.getElementById("sliderMicroInfluencer");
-            const priceElement = document.getElementById("priceMicroInfluencer");
-            const countElement = document.getElementById("microInfluencerCount");
+        // Spotify Slider Fonksiyonu
+document.addEventListener("DOMContentLoaded", function() {
+    const slider = document.getElementById("sliderMicroInfluencer");
+    const priceElement = document.getElementById("priceMicroInfluencer");
+    const countElement = document.getElementById("microInfluencerCount");
 
-            slider.addEventListener("input", function() {
-                const value = this.value;
-                const calculatedPrice = value * 4000;
-                
-                const formattedPrice = new Intl.NumberFormat('tr-TR', {
-                    style: 'currency',
-                    currency: 'TRY',
-                    minimumFractionDigits: 0
-                }).format(calculatedPrice);
-                
-                priceElement.textContent = formattedPrice;
-                countElement.innerHTML = `Minimum <strong>+${value}</strong> Makro Fenomen`;
-            });
+    if (!slider || !priceElement || !countElement) {
+        console.error("Gerekli elementler bulunamadı!");
+        return;
+    }
 
-            // Slider kontrolü
-            const tiktokSlider = document.querySelector('.tiktok-slider');
-            const prevBtn = document.querySelector('.slider-prev');
-            const nextBtn = document.querySelector('.slider-next');
-            const dotsContainer = document.querySelector('.slider-dots');
-            
-            let currentIndex = 0;
-            let cardWidth = document.querySelector('.tiktok-card').offsetWidth + 24; // 24px gap
-            
-            function updateSlider() {
-                tiktokSlider.scrollTo({
-                    left: currentIndex * cardWidth,
-                    behavior: 'smooth'
-                });
-                
-                updateDots();
-            }
-            
-            function updateDots() {
-                const dots = document.querySelectorAll('.dot');
-                dots.forEach((dot, index) => {
-                    dot.classList.toggle('active', index === currentIndex);
-                });
-            }
-            
-            // Dot'ları oluştur
-            const cards = document.querySelectorAll('.tiktok-card');
-            cards.forEach((_, index) => {
-                const dot = document.createElement('div');
-                dot.classList.add('dot');
-                if(index === 0) dot.classList.add('active');
-                dot.addEventListener('click', () => {
-                    currentIndex = index;
-                    updateSlider();
-                });
-                dotsContainer.appendChild(dot);
-            });
-            
-            prevBtn.addEventListener('click', () => {
-                if(currentIndex > 0) {
-                    currentIndex--;
-                    updateSlider();
-                }
-            });
-            
-            nextBtn.addEventListener('click', () => {
-                if(currentIndex < cards.length - 1) {
-                    currentIndex++;
-                    updateSlider();
-                }
-            });
-            
-            // Responsive için cardWidth'ı güncelle
-            window.addEventListener('resize', () => {
-                cardWidth = document.querySelector('.tiktok-card').offsetWidth + 24;
-            });
-        });
+    // Başlangıç değerini ayarla
+    updateSliderValues(slider.value);
+
+    slider.addEventListener("input", function() {
+        updateSliderValues(this.value);
+    });
+
+    function updateSliderValues(value) {
+        const calculatedPrice = (value * 0.60).toFixed(2);
+        
+        // Fiyat formatlama - gereksiz ondalık basamakları kaldır
+        const formattedPrice = new Intl.NumberFormat('tr-TR', {
+            style: 'currency',
+            currency: 'TRY',
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 0
+        }).format(calculatedPrice);
+        
+        // Dinleyici sayısını binlik basamaklara ayır
+        const formattedCount = new Intl.NumberFormat('tr-TR').format(value);
+        
+        priceElement.textContent = formattedPrice;
+        countElement.innerHTML = `Minimum <strong>+${formattedCount}</strong> Dinleyici veya Dinlenme`;
+    }
+});
+
+// TikTok Slider Fonksiyonu (diğer kodlarınız...)
+const tiktokSlider = document.querySelector('.tiktok-slider');
+const prevBtn = document.querySelector('.slider-prev');
+const nextBtn = document.querySelector('.slider-next');
+const dotsContainer = document.querySelector('.slider-dots');
+
+let currentIndex = 0;
+let cardWidth = document.querySelector('.tiktok-card').offsetWidth + 24; // 24px gap
+
+function updateSlider() {
+    tiktokSlider.scrollTo({
+        left: currentIndex * cardWidth,
+        behavior: 'smooth'
+    });
+    
+    updateDots();
+}
+
+function updateDots() {
+    const dots = document.querySelectorAll('.dot');
+    dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+    });
+}
+
+// Dot'ları oluştur
+const cards = document.querySelectorAll('.tiktok-card');
+cards.forEach((_, index) => {
+    const dot = document.createElement('div');
+    dot.classList.add('dot');
+    if(index === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => {
+        currentIndex = index;
+        updateSlider();
+    });
+    dotsContainer.appendChild(dot);
+});
+
+prevBtn.addEventListener('click', () => {
+    if(currentIndex > 0) {
+        currentIndex--;
+        updateSlider();
+    }
+});
+
+nextBtn.addEventListener('click', () => {
+    if(currentIndex < cards.length - 1) {
+        currentIndex++;
+        updateSlider();
+    }
+});
+
+// Responsive için cardWidth'ı güncelle
+window.addEventListener('resize', () => {
+    cardWidth = document.querySelector('.tiktok-card').offsetWidth + 24;
+});
 
         // Modal'ı gösterme fonksiyonu
         function showModalTikTok() {

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="makro.css">
+    <title>XTurkiye - Youtube Hizmetleri</title>
+    
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="mil-background">
+    <div class="mil-pentagon-animation"></div>
+</div>
+
+<header class="mil-header">
+    <div class="mil-frame-top">
+        <a href="index.html" class="mil-logo">
+            <img src="xturkiye.png" alt="XTurkiye Logo" class="mil-logo-img">
+        </a>
+        <div class="mil-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+    </div>
+    
+    <nav class="mil-main-menu">
+        <ul>
+            <li><a href="index.html">Anasayfa</a></li>
+            <li><a href="#about">Hakkımızda</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+
+    <!-- Ana İçerik -->
+    <div class="mil-content">
+        <div class="pricing-card" >
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/2560px-YouTube_full-color_icon_%282017%29.svg.png" style="filter: invert(0);"
+                 alt="TikTok Logo" class="spotify-logo">
+            <p class="listener-count" id="microInfluencerCount">Minimum <strong>+10.000</strong> İzlenme veya Dinlenme</p>
+
+            <div class="price" id="priceMicroInfluencer">₺9.000</div>
+
+            <div class="slider-container">
+                <span class="slider-arrow">»</span>
+                <span class="slider-text">Kaydır</span>
+                <input type="range" id="sliderMicroInfluencer" min="10000" max="2000000" value="10000" step="1">
+            </div>
+
+            <div class="yazilar">
+                <p>• <strong>Doğru Müzik Kitlesine Erişim:</strong> İçeriğinizi ilgi alanına uygun izleyicilerle buluşturuyoruz</p>
+                <p>• <strong>Trend Etkisiyle Organik Yorum + Beğeni Desteği:</strong> Videolarınız doğal etkileşimlerle öne çıkar.</p>
+                <p>• <strong>%100 Türkiye Lokasyonu: </strong> Tüm izleyiciler yalnızca Türkiye’den. </p>
+                <p>• <strong>İsteğe Bağlı Detaylı İstatistik Paylaşımı</strong> Kampanya süreci boyunca şeffaf raporlama.</p>
+                <p>• <strong>Hedef Kitleye Uygun Optimizasyon:</strong> İçeriğinizi en doğru kitleyle buluşturmak için gelişmiş hedefleme.</p>
+                <p>• <strong>Bot veya Sahte Yazılım Kesinlikle Kullanılmaz:</strong> Yalnızca etik ve organik yöntemlerle ilerlenir.</p>
+                <p>• <strong>Kişiye özel kampanya planlaması için 10.00 - 18.00 saatleri arasında WhatsApp destek hattımızdan bize ulaşabilirsiniz.</strong></p>
+            </div>
+
+            <a href="#" class="satinal" onclick="showModalTikTok('user')">Sipariş ver</a>
+        </div>
+
+        <script>
+    // Mobil Menü Toggle
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuBtn = document.querySelector('.mil-menu-btn');
+        const menu = document.querySelector('.mil-main-menu');
+        
+        menuBtn.addEventListener('click', function() {
+            this.classList.toggle('active');
+            menu.classList.toggle('active');
+        });
+        
+        // Menü linklerine tıklandığında menüyü kapat
+        const menuLinks = document.querySelectorAll('.mil-main-menu a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                menuBtn.classList.remove('active');
+                menu.classList.remove('active');
+            });
+        });
+    });
+
+        // Partikül animasyonu
+        function createParticles() {
+    const particlesContainer = document.querySelector('.mil-background');
+    if (!particlesContainer) return; // Güvenlik için kontrol
+
+    const particleCount = window.innerWidth < 768 ? 20 : 50;
+    
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('mil-particle');
+        
+        const size = Math.random() * 3 + 2;
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        
+        particle.style.left = `${Math.random() * 100}vw`;
+        particle.style.top = `${Math.random() * 100}vh`;
+        
+        const duration = Math.random() * 20 + 10;
+        const delay = Math.random() * 5;
+        particle.style.animation = `float ${duration}s linear ${delay}s infinite`;
+        
+        particlesContainer.appendChild(particle);
+    }
+}
+
+window.addEventListener('load', () => {
+    createParticles();
+
+    const bgAnimation = document.querySelector('.mil-pentagon-animation');
+    if (!bgAnimation) return;
+
+    let scale = 1;
+    let direction = 0.0002;
+
+    function animateBackground() {
+        scale += direction;
+
+        if (scale > 1.05) direction = -0.0002;
+        if (scale < 0.95) direction = 0.0002;
+
+        bgAnimation.style.transform = `scale(${scale})`;
+        requestAnimationFrame(animateBackground);
+    }
+
+    animateBackground();
+});
+        
+        // Diğer JavaScript kodları aynı şekilde kalacak...
+
+</script>
+
+
+        <!-- TikTok Referans Slider -->
+    </div>
+
+    <!-- Modal -->
+    <div id="purchaseModalTikTok" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeModalTikTok()">&times;</span>
+            <h3>Siparişinizi Oluşturun</h3>
+            <p><strong>Fiyat:</strong> <span id="finalPriceTikTok">₺0</span></p>
+            <p><strong>Seçim:</strong> <span id="finalCountTikTok"></span></p>
+            
+            <input type="text" id="tiktokName" placeholder="Adınız">
+            
+            <label for="tikTokLink">Youtube Linkinizi Girin:</label>
+            <input type="text" id="tikTokLink" placeholder="Youtube linkinizi buraya yazın">
+            
+            <button onclick="submitLinkTikTok()">Gönder</button>
+        </div>
+    </div>
+
+    <script>
+        // Spotify Slider Fonksiyonu
+document.addEventListener("DOMContentLoaded", function() {
+    const slider = document.getElementById("sliderMicroInfluencer");
+    const priceElement = document.getElementById("priceMicroInfluencer");
+    const countElement = document.getElementById("microInfluencerCount");
+
+    if (!slider || !priceElement || !countElement) {
+        console.error("Gerekli elementler bulunamadı!");
+        return;
+    }
+
+    // Başlangıç değerini ayarla
+    updateSliderValues(slider.value);
+
+    slider.addEventListener("input", function() {
+        updateSliderValues(this.value);
+    });
+
+    function updateSliderValues(value) {
+        const calculatedPrice = (value * 0.90).toFixed(2);
+        
+        // Fiyat formatlama - gereksiz ondalık basamakları kaldır
+        const formattedPrice = new Intl.NumberFormat('tr-TR', {
+            style: 'currency',
+            currency: 'TRY',
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 0
+        }).format(calculatedPrice);
+        
+        // Dinleyici sayısını binlik basamaklara ayır
+        const formattedCount = new Intl.NumberFormat('tr-TR').format(value);
+        
+        priceElement.textContent = formattedPrice;
+        countElement.innerHTML = `Minimum <strong>+${formattedCount}</strong> İzlenme veya Dinlenme`;
+    }
+});
+
+// TikTok Slider Fonksiyonu (diğer kodlarınız...)
+const tiktokSlider = document.querySelector('.tiktok-slider');
+const prevBtn = document.querySelector('.slider-prev');
+const nextBtn = document.querySelector('.slider-next');
+const dotsContainer = document.querySelector('.slider-dots');
+
+let currentIndex = 0;
+let cardWidth = document.querySelector('.tiktok-card').offsetWidth + 24; // 24px gap
+
+function updateSlider() {
+    tiktokSlider.scrollTo({
+        left: currentIndex * cardWidth,
+        behavior: 'smooth'
+    });
+    
+    updateDots();
+}
+
+function updateDots() {
+    const dots = document.querySelectorAll('.dot');
+    dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+    });
+}
+
+// Dot'ları oluştur
+const cards = document.querySelectorAll('.tiktok-card');
+cards.forEach((_, index) => {
+    const dot = document.createElement('div');
+    dot.classList.add('dot');
+    if(index === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => {
+        currentIndex = index;
+        updateSlider();
+    });
+    dotsContainer.appendChild(dot);
+});
+
+prevBtn.addEventListener('click', () => {
+    if(currentIndex > 0) {
+        currentIndex--;
+        updateSlider();
+    }
+});
+
+nextBtn.addEventListener('click', () => {
+    if(currentIndex < cards.length - 1) {
+        currentIndex++;
+        updateSlider();
+    }
+});
+
+// Responsive için cardWidth'ı güncelle
+window.addEventListener('resize', () => {
+    cardWidth = document.querySelector('.tiktok-card').offsetWidth + 24;
+});
+
+        // Modal'ı gösterme fonksiyonu
+        function showModalTikTok() {
+            const modal = document.getElementById('purchaseModalTikTok');
+            const price = document.getElementById('priceMicroInfluencer').textContent;
+            const count = document.getElementById('microInfluencerCount').textContent;
+
+            document.getElementById('finalPriceTikTok').textContent = price;
+            document.getElementById('finalCountTikTok').textContent = count;
+            modal.style.display = "block";
+        }
+
+        // Modal'ı kapatma fonksiyonu
+        function closeModalTikTok() {
+            const modal = document.getElementById('purchaseModalTikTok');
+            modal.style.display = "none";
+        }
+
+        // TikTok Linki Gönderme ve WhatsApp'a yönlendirme
+        function submitLinkTikTok() {
+            const name = document.getElementById('tiktokName').value.trim();
+            const tikTokLink = document.getElementById('tikTokLink').value.trim();
+            const finalPrice = document.getElementById('finalPriceTikTok').textContent;
+            const finalCount = document.getElementById('finalCountTikTok').textContent;
+
+            if (!name) {
+                alert("Lütfen adınızı girin.");
+                return;
+            }
+
+            if (!tikTokLink) {
+                alert("Lütfen geçerli bir TikTok linki girin.");
+                return;
+            }
+
+            const phoneNumber = "905334237961";
+            const message = `Merhaba, adım ${name} Youtube Hizmeti satın almak istiyorum.\n\n` +
+                           `Paket Bilgisi: ${finalCount}\n` +
+                           `Fiyat: ${finalPrice}\n` +
+                           `Youtube Linki: ${tikTokLink}\n\n` +
+                           `Ödeme yapmak ve siparişi tamamlamak istiyorum.`;
+            
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+            
+            closeModalTikTok();
+        }
+
+        // Modal dışına tıklandığında kapanmasını sağlamak için
+        window.onclick = function(event) {
+            const modal = document.getElementById('purchaseModalTikTok');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
