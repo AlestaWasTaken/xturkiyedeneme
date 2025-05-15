@@ -1875,7 +1875,7 @@ banner
 @media screen and (max-width: 992px) {
   .mil-banner .mil-banner-content {
             position: relative;
-        top: 6rem;
+        top: 10rem;
   }
 }
 .mil-banner .mil-lines-place {
