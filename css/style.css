@@ -1878,6 +1878,13 @@ banner
         top: 10rem;
   }
 }
+@media screen and (max-width: 992px) {
+  .textorta {
+            position: relative;
+        top: 3rem;
+  }
+}
+
 .mil-banner .mil-lines-place {
   position: absolute;
   left: 0;
