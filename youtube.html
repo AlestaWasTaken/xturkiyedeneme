@@ -48,7 +48,7 @@
                  alt="TikTok Logo" class="spotify-logo">
             <p class="listener-count" id="microInfluencerCount">Minimum <strong>+10.000</strong> İzlenme veya Dinlenme</p>
 
-            <div class="price" id="priceMicroInfluencer">₺9.000</div>
+            <div class="price" id="priceMicroInfluencer">₺900</div>
 
             <div class="slider-container">
                 <span class="slider-arrow">»</span>
@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     function updateSliderValues(value) {
-        const calculatedPrice = (value * 0.90).toFixed(2);
+        const calculatedPrice = (value * 0.09).toFixed(2);
         
         // Fiyat formatlama - gereksiz ondalık basamakları kaldır
         const formattedPrice = new Intl.NumberFormat('tr-TR', {
