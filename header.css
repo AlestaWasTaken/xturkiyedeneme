@@ -1,0 +1,178 @@
+/* Temel Stiller */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.xt-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.xt-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+/* Logo Stilleri */
+.xt-logo img {
+    height: 40px;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+/* Ana Menü Stilleri */
+.xt-menu {
+    display: flex;
+    list-style: none;
+}
+
+.xt-menu li {
+    margin-left: 30px;
+    position: relative;
+}
+
+.xt-menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.xt-menu li a:hover,
+.xt-menu li a.active {
+    color: #FF9800;
+}
+
+.xt-menu li a:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #FF9800;
+    transition: width 0.3s ease;
+}
+
+.xt-menu li a:hover:after,
+.xt-menu li a.active:after {
+    width: 100%;
+}
+
+/* Mobil Menü Butonu */
+.xt-mobile-menu-btn {
+    display: none;
+    width: 30px;
+    height: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.xt-mobile-menu-btn span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+/* Mobil Menü */
+.xt-mobile-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(20px);
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+    overflow-y: auto;
+    z-index: 999;
+}
+
+.xt-mobile-menu ul {
+    list-style: none;
+    padding: 30px;
+}
+
+.xt-mobile-menu li {
+    margin-bottom: 20px;
+}
+
+.xt-mobile-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.xt-mobile-menu a:hover {
+    background-color: rgba(255, 152, 0, 0.1);
+    color: #FF9800;
+}
+
+/* Mobil Menü Açık Durumu */
+.xt-mobile-menu.active {
+    transform: translateX(0);
+}
+
+.xt-mobile-menu-btn.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.xt-mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.xt-mobile-menu-btn.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Responsive Tasarım */
+@media (max-width: 992px) {
+    .xt-menu {
+        display: none;
+    }
+    
+    .xt-mobile-menu-btn {
+        display: flex;
+    }
+    
+    .xt-container {
+        height: 60px;
+    }
+    
+    .xt-logo img {
+        height: 35px;
+    }
+    
+    .xt-mobile-menu {
+        top: 60px;
+        height: calc(100vh - 60px);
+    }
+}

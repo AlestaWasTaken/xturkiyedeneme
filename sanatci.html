@@ -15,15 +15,203 @@
 </head>
 
 <body>
-   <style>
+ 
+<style>
+        /* TEMEL STİLLER */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            padding-top: 80px; /* Header yüksekliği kadar boşluk */
+        }
+        
+        /* HEADER */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #000;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        .logo img {
+            height: 50px;
+        }
+        
+        /* MENÜ */
+        .menu {
+            display: flex;
+            list-style: none;
+        }
+        
+        .menu li {
+            margin-left: 30px;
+        }
+        
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+            padding: 5px 10px;
+            border-radius: 3px;
+        }
+        
+       
+        
+        /* MOBİL MENÜ BUTONU */
+        .mobile-menu-btn {
+            display: none;
+            width: 30px;
+            height: 20px;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+        
+        .mobile-menu-btn span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: white;
+            transition: 0.3s;
+        }
+        
+        /* MOBİL MENÜ */
+        .mobile-menu {
+            position: fixed;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            background: #000000;
+            padding: 20px;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+            transform: translateY(-150%);
+            transition: 0.4s;
+            z-index: 999;
+        }
+        
+        .mobile-menu.active {
+            transform: translateY(0);
+        }
+        
+        .mobile-menu ul {
+            list-style: none;
+        }
+        
+        .mobile-menu li {
+            margin-bottom: 15px;
+        }
+        
+        .mobile-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+        }
     
+        
+        /* MOBİL DÜZEN */
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: flex;
+            }
+            
+            body {
+                padding-top: 70px;
+            }
+            
+            
+            
+            .logo img {
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="xturkiye.png" alt="XTurkiye"></a>
+        </div>
+        
+        <ul class="menu">
+            <li><a href="index.html">Anasayfa</a></li>
+        </ul>
+        
+        <div class="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    
+    <!-- MOBİL MENÜ -->
+    <nav class="mobile-menu">
+        <ul>
+            <li><a href="index.html">Anasayfa</a></li>
 
-</style>
+        </ul>
+    </nav>
+    
+    <script>
+        // MOBİL MENÜ TOGGLE
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        menuBtn.addEventListener('click', function() {
+            this.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            
+            // Hamburger ikon animasyonu
+            const spans = this.querySelectorAll('span');
+            if(this.classList.contains('active')) {
+                spans[0].style.transform = 'translateY(8px) rotate(45deg)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'translateY(-8px) rotate(-45deg)';
+            } else {
+                spans[0].style.transform = '';
+                spans[1].style.opacity = '';
+                spans[2].style.transform = '';
+            }
+        });
+        
+        // Menü linklerine tıklandığında mobil menüyü kapat
+        const menuLinks = document.querySelectorAll('.mobile-menu a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                menuBtn.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                
+                // Hamburger ikonu resetle
+                const spans = menuBtn.querySelectorAll('span');
+                spans[0].style.transform = '';
+                spans[1].style.opacity = '';
+                spans[2].style.transform = '';
+            });
+        });
+    </script>
 
    <div class="mil-wrapper" id="top">
     <div class="mil-content">
         <div id="swupMain" class="mil-main-transition">
-
             <section class="mil-dark-bg">
                 <div class="mi-invert-fix">
                     <div class="container mil-p-120-60">
@@ -40,7 +228,7 @@
                                 </svg>
                                 <h5 class="mil-muted">Spotify Reklam/Tanıtım</h5>
                             </div>
-                            <button class="mil-button mil-sm mil-mb-30" onclick="window.location.href='spotify.html';">Dinleyici Playlist Reklam/Tanıtımları</button>
+                            <button class="mil-button mil-sm mil-mb-30" onclick="window.location.href='makro.html';">Dinleyici Playlist Reklam/Tanıtımları</button>
                         </div>
 
                         <!-- TikTok Services -->
